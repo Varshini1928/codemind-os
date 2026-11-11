@@ -1,0 +1,261 @@
+{
+  "repository_id": "sample-repo-e1af7bd4",
+  "revision": "nogit+c2db680b30",
+  "request": "Test plan for apply_discount",
+  "tasks": [
+    "tests"
+  ],
+  "status": "complete",
+  "summary": "3 proposed test case(s) for 1 function(s); all derived from AST facts with evidence.",
+  "sections": [
+    {
+      "task": "tests",
+      "question": "Test plan for apply_discount",
+      "elapsed_s": 0.01,
+      "summary": "3 proposed test case(s) for 1 function(s); all derived from AST facts with evidence.",
+      "mode": "deterministic",
+      "insufficient": false,
+      "notes": [
+        "AI refinement skipped: AI interpretation disabled for this request"
+      ],
+      "errors": [],
+      "claims": [
+        {
+          "text": "Proposed behavior test T1 targets `inventory.service.apply_discount`: Not derivable from code",
+          "kind": "recommendation",
+          "evidence_ids": [
+            "E1"
+          ],
+          "status": "citation-valid",
+          "notes": [],
+          "citations": [
+            {
+              "citation": {
+                "revision": "nogit+c2db680b30",
+                "path": "inventory/service.py",
+                "start_line": 27,
+                "end_line": 31,
+                "symbol": "inventory.service.apply_discount",
+                "chunk_id": "2afc16d16e7c8470"
+              },
+              "valid": true,
+              "checks": {
+                "path_in_repository": true,
+                "line_range_valid": true,
+                "revision_matches": true,
+                "chunk_matches_source": true
+              },
+              "reason": "",
+              "semantic_correctness": "not verified"
+            }
+          ]
+        },
+        {
+          "text": "Proposed exception test T2 targets `inventory.service.apply_discount`: raises `ValueError`",
+          "kind": "recommendation",
+          "evidence_ids": [
+            "E1"
+          ],
+          "status": "citation-valid",
+          "notes": [],
+          "citations": [
+            {
+              "citation": {
+                "revision": "nogit+c2db680b30",
+                "path": "inventory/service.py",
+                "start_line": 27,
+                "end_line": 31,
+                "symbol": "inventory.service.apply_discount",
+                "chunk_id": "2afc16d16e7c8470"
+              },
+              "valid": true,
+              "checks": {
+                "path_in_repository": true,
+                "line_range_valid": true,
+                "revision_matches": true,
+                "chunk_matches_source": true
+              },
+              "reason": "",
+              "semantic_correctness": "not verified"
+            }
+          ]
+        },
+        {
+          "text": "Proposed branch test T3 targets `inventory.service.apply_discount`: raises `ValueError('percent out of range')`",
+          "kind": "recommendation",
+          "evidence_ids": [
+            "E2"
+          ],
+          "status": "citation-valid",
+          "notes": [],
+          "citations": [
+            {
+              "citation": {
+                "revision": "nogit+c2db680b30",
+                "path": "inventory/service.py",
+                "start_line": 29,
+                "end_line": 30,
+                "symbol": "inventory.service.apply_discount",
+                "chunk_id": "2afc16d16e7c8470"
+              },
+              "valid": true,
+              "checks": {
+                "path_in_repository": true,
+                "line_range_valid": true,
+                "revision_matches": true,
+                "chunk_matches_source": true
+              },
+              "reason": "",
+              "semantic_correctness": "not verified"
+            }
+          ]
+        }
+      ],
+      "payload": {
+        "tests": [
+          {
+            "target": "inventory.service.apply_discount",
+            "file": "inventory/service.py",
+            "evidence_ids": [
+              "E1"
+            ],
+            "existing_tests": [
+              "tests.test_service.test_apply_discount"
+            ],
+            "id": "T1",
+            "category": "behavior",
+            "behavior": "`inventory.service.apply_discount` - Return the discounted unit price.",
+            "inputs_fixtures": [
+              "`product`",
+              "`percent`"
+            ],
+            "expected_result": "Not derivable from code",
+            "expected_basis": "partly derived from the signature; reviewer must confirm the exact expected value",
+            "boundary_conditions": [
+              "`percent`: 0, negative value, very large value"
+            ],
+            "exception_scenarios": [],
+            "rationale": "Establish the documented/primary behavior before edge cases.",
+            "untested": false
+          },
+          {
+            "target": "inventory.service.apply_discount",
+            "file": "inventory/service.py",
+            "evidence_ids": [
+              "E1"
+            ],
+            "existing_tests": [
+              "tests.test_service.test_apply_discount"
+            ],
+            "id": "T2",
+            "category": "exception",
+            "behavior": "`inventory.service.apply_discount` raises `ValueError`",
+            "inputs_fixtures": [
+              "input that triggers the raise statement (see evidence)"
+            ],
+            "expected_result": "raises `ValueError`",
+            "expected_basis": "derived from a `raise` statement in the source",
+            "boundary_conditions": [],
+            "exception_scenarios": [
+              "ValueError"
+            ],
+            "rationale": "Each explicit raise is a contract worth testing.",
+            "untested": false
+          },
+          {
+            "target": "inventory.service.apply_discount",
+            "file": "inventory/service.py",
+            "evidence_ids": [
+              "E2"
+            ],
+            "existing_tests": [
+              "tests.test_service.test_apply_discount"
+            ],
+            "id": "T3",
+            "category": "branch",
+            "behavior": "`inventory.service.apply_discount` when `percent < 0 or percent > 100` is true and when it is false",
+            "inputs_fixtures": [
+              "one input satisfying `percent < 0 or percent > 100`, one that does not"
+            ],
+            "expected_result": "raises `ValueError('percent out of range')`",
+            "expected_basis": "derived from the first statement of the branch",
+            "boundary_conditions": [],
+            "exception_scenarios": [],
+            "rationale": "Cover both outcomes of the branch at line 29.",
+            "untested": false
+          }
+        ],
+        "coverage_note": "'existing_tests' lists tests linked by a static call/naming heuristic; coverage was not measured. Test code is not generated and nothing is executed."
+      }
+    }
+  ],
+  "evidence": [
+    {
+      "id": "E1",
+      "revision": "nogit+c2db680b30",
+      "path": "inventory/service.py",
+      "start_line": 27,
+      "end_line": 31,
+      "symbol": "inventory.service.apply_discount",
+      "chunk_id": "2afc16d16e7c8470",
+      "language": "python",
+      "methods": [
+        "ast",
+        "exact",
+        "graph",
+        "lexical",
+        "semantic"
+      ],
+      "scores": {},
+      "final_score": 0.0,
+      "entity_ids": [
+        "e_c9b37a14d9a14255"
+      ],
+      "uncertainty": [],
+      "text": "def apply_discount(product: Product, percent: float) -> float:\n    \"\"\"Return the discounted unit price.\"\"\"\n    if percent < 0 or percent > 100:\n        raise ValueError(\"percent out of range\")\n    return product.price * (1 - percent / 100)"
+    },
+    {
+      "id": "E2",
+      "revision": "nogit+c2db680b30",
+      "path": "inventory/service.py",
+      "start_line": 29,
+      "end_line": 30,
+      "symbol": "inventory.service.apply_discount",
+      "chunk_id": "2afc16d16e7c8470",
+      "language": "python",
+      "methods": [
+        "ast"
+      ],
+      "scores": {},
+      "final_score": 0.0,
+      "entity_ids": [
+        "e_c9b37a14d9a14255"
+      ],
+      "uncertainty": [],
+      "text": "    if percent < 0 or percent > 100:\n        raise ValueError(\"percent out of range\")"
+    }
+  ],
+  "verification": {
+    "total": 3,
+    "citation_valid": 3,
+    "unverified": 0,
+    "removed": 0,
+    "uncited": 0,
+    "claims_with_evidence": 3,
+    "citation_coverage": 1.0,
+    "note": "Citation validity means the cited lines exist in the indexed revision and match the stored chunk; it does not prove the claim's interpretation is correct."
+  },
+  "uncertainty": [
+    "AI refinement skipped: AI interpretation disabled for this request"
+  ],
+  "errors": [],
+  "ai": {
+    "used": false,
+    "model": null,
+    "error": "AI interpretation disabled for this request"
+  },
+  "stale_index": false,
+  "generated_at": "2026-10-28T07:37:02+00:00",
+  "engine": "sequential-fallback (langgraph not installed)",
+  "elapsed_s": 0.01
+}

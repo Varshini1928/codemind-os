@@ -1,0 +1,23 @@
+# Implementation status (honest report)
+
+## Verified by execution in the authoring sandbox
+Environment: Python 3.12.3, with only `networkx`, `numpy`, `pandas`, `PyYAML`, `requests`, `psutil` installed; **no network, no pytest, FastAPI, Streamlit, ChromaDB, sentence-transformers, LangGraph, tree-sitter or Ollama**. Because `pytest` could not be installed, the suite was run with a small private shim that supports the fixtures used (`tmp_path`, `monkeypatch`, `importorskip`, `skipif`, `raises`). Result: **93 passed, 0 failed, 3 skipped** (API tests – FastAPI missing; tree-sitter; real-Ollama integration). The tests are standard pytest and should be re-run with real `pytest`.
+
+Demonstrated end to end (sample repo, CLI/services, hashing embeddings, SQLite vectors, no LLM): read-only indexing; exclusions (dirs, binaries, oversize, symlinks, secret files/content); Python AST extraction; syntax-error tolerance; regex fallback; knowledge graph with resolved/heuristic/external edges and JSON round-trip; symbol-aware chunking; incremental updates (add/modify/delete, no duplicate chunks, revision restamp); full re-index; index deletion; BM25/exact/semantic(hash)/graph hybrid ranking; insufficient-evidence detection; citation checker (missing path, bad range, wrong revision, traversal, stale file, bad chunk, inline citations); claim relabelling/removal; quality rules; impact analysis; test planning; documentation generation; report saving/rendering; LLM path with a mocked model (claims verified, failures reported, injection neutralised, malformed JSON); approval gates for writes/test execution (with scrubbed environment); local-only network test (0 external connections); evaluation script (real measurements in `docs/EVALUATION.md`); example reports in `examples/reports/` from real runs on the sample repo.
+
+## Implemented but NOT executed here
+FastAPI service and its tests (incl. token auth, hosted mode, security headers, static UI serving); ChromaDB vector backend; sentence-transformers embeddings; LangGraph engine (the sequential fallback ran instead); tree-sitter adapter (JS/TS/Java/Go); real Ollama calls; `ruff`/`mypy`; the setup scripts and the Windows workflow; pinned dependency versions (chosen for compatibility, not install-tested). Expect to fix small integration bugs when you first run these.
+
+## Web UI and hosting (added in v1.1)
+* Streamlit was removed. The UI is plain HTML/CSS/ES-modules in `web/` (no build step, no external assets), served by FastAPI. Verified here by: `node --check` on every module, unit tests of the Markdown parser and graph layout, and a **fake-DOM smoke test** that renders every page and drives the main interactions (add/index repository, explorer, graph, ask + evidence drawer, quality, impact, tests, docs, reports, settings) against real backend payloads. **It has not been opened in a real browser** — expect visual/layout polish issues and small browser-specific bugs.
+* **Accounts (v1.2):** sign-up, login, Account page, Admin page (users, approvals, repositories, audit log), roles, per-user repository isolation, lockout and rate limits. The service layer (`services/auth_service.py`), the pure access rules (`backend/authz.py`), ownership and the database migration are unit-tested and pass here; the FastAPI layer that applies them (cookie handling, middleware, `tests/test_api.py`) is **not executed here** (no FastAPI in the authoring sandbox). The UI pages are covered by the fake-DOM smoke test in both signed-in and signed-out scenarios, not by a real browser.
+* `Dockerfile`, `render.yaml`, `requirements-render.txt` are **untested** (no Docker/Render access). The hosted instance has no LLM (deterministic mode), an ephemeral disk on the free plan, accounts that need an administrator (seeded from environment variables) and no email delivery (password resets are admin-issued).
+
+## Not implemented / known limitations
+* Test **code** generation (plans only), and any LLM-driven repository mutation.
+* Call/inheritance resolution is exact only for Python; other languages use heuristic same-file matching; no cross-file call resolution for them. Dynamic dispatch, reflection and cross-language calls are invisible.
+* DatabaseEntity/WRITES_ENTITY and Endpoint detection are pattern heuristics.
+* `.gitignore` rules are not read (built-in exclusions + your patterns only).
+* LLM-path citation quality, human usefulness and neural-embedding retrieval quality are **not evaluated**.
+* The optional test runner is not a security sandbox. The API has no authentication. Secret detection is imperfect.
+* Quality rules cover Python only; other languages get credential-pattern checks and TODO markers.

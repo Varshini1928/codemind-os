@@ -1,0 +1,246 @@
+{
+  "repository_id": "sample-repo-e1af7bd4",
+  "revision": "nogit+c2db680b30",
+  "request": "How does the zebra blockchain replicate?",
+  "tasks": [
+    "question"
+  ],
+  "status": "insufficient_evidence",
+  "summary": "Insufficient evidence: no indexed code or documentation matched this question strongly enough to answer without guessing. Try naming a file, function or class, or re-index the repository.",
+  "sections": [
+    {
+      "task": "question",
+      "question": "How does the zebra blockchain replicate?",
+      "elapsed_s": 0.01,
+      "summary": "Insufficient evidence: no indexed code or documentation matched this question strongly enough to answer without guessing. Try naming a file, function or class, or re-index the repository.",
+      "mode": "deterministic",
+      "insufficient": true,
+      "notes": [
+        "Semantic signal uses the hashing fallback embedder (vocabulary overlap, not meaning)."
+      ],
+      "errors": [],
+      "claims": [],
+      "payload": {
+        "retrieval": {
+          "mode": "hybrid",
+          "stats": {
+            "candidates": 39,
+            "returned": 12,
+            "weights": {
+              "semantic": 0.45,
+              "graph": 0.2,
+              "lexical": 0.3,
+              "recency": 0.05
+            },
+            "elapsed_ms": 7.3
+          },
+          "evidence_ids": [
+            "E1",
+            "E2",
+            "E3",
+            "E4",
+            "E5",
+            "E6",
+            "E7",
+            "E8",
+            "E9",
+            "E10",
+            "E11",
+            "E12"
+          ]
+        },
+        "weak_matches": [
+          {
+            "id": "E1",
+            "revision": "nogit+c2db680b30",
+            "path": "inventory/service.py",
+            "start_line": 9,
+            "end_line": 14,
+            "symbol": "inventory.service.add_stock",
+            "chunk_id": "2a46bc7ed69f2c36",
+            "language": "python",
+            "methods": [
+              "graph",
+              "semantic"
+            ],
+            "scores": {
+              "components": {
+                "semantic": 1.0,
+                "graph": 1.0,
+                "lexical": 0.0,
+                "recency": 0.6715
+              },
+              "raw": {
+                "semantic": 0.167,
+                "cosine": 0.167,
+                "graph": 1.0
+              }
+            },
+            "final_score": 0.6836,
+            "entity_ids": [
+              "e_7dd50c6d6b398f49"
+            ],
+            "uncertainty": []
+          },
+          {
+            "id": "E2",
+            "revision": "nogit+c2db680b30",
+            "path": "inventory/service.py",
+            "start_line": 17,
+            "end_line": 24,
+            "symbol": "inventory.service.remove_stock",
+            "chunk_id": "5502d30c8df441a5",
+            "language": "python",
+            "methods": [
+              "graph",
+              "semantic"
+            ],
+            "scores": {
+              "components": {
+                "semantic": 0.9902,
+                "graph": 1.0,
+                "lexical": 0.0,
+                "recency": 0.6715
+              },
+              "raw": {
+                "semantic": 0.1654,
+                "cosine": 0.1654,
+                "graph": 1.0
+              }
+            },
+            "final_score": 0.6792,
+            "entity_ids": [
+              "e_10e0bb88cc2fa36c"
+            ],
+            "uncertainty": []
+          },
+          {
+            "id": "E3",
+            "revision": "nogit+c2db680b30",
+            "path": "docs/overview.md",
+            "start_line": 1,
+            "end_line": 3,
+            "symbol": "Overview",
+            "chunk_id": "15d9c6040afaa6fa",
+            "language": "markdown",
+            "methods": [
+              "graph",
+              "semantic"
+            ],
+            "scores": {
+              "components": {
+                "semantic": 0.7046,
+                "graph": 1.0,
+                "lexical": 0.0,
+                "recency": 1.0
+              },
+              "raw": {
+                "semantic": 0.1177,
+                "cosine": 0.1177,
+                "graph": 1.0
+              }
+            },
+            "final_score": 0.5671,
+            "entity_ids": [
+              "e_079e2e786e3a7e46"
+            ],
+            "uncertainty": [
+              "File parse status: text_only (heuristic structure)"
+            ]
+          },
+          {
+            "id": "E4",
+            "revision": "nogit+c2db680b30",
+            "path": "inventory/api.py",
+            "start_line": 14,
+            "end_line": 16,
+            "symbol": "inventory.api.post_add",
+            "chunk_id": "35cc2f85e344389a",
+            "language": "python",
+            "methods": [
+              "graph",
+              "semantic"
+            ],
+            "scores": {
+              "components": {
+                "semantic": 0.684,
+                "graph": 1.0,
+                "lexical": 0.0,
+                "recency": 0.8026
+              },
+              "raw": {
+                "semantic": 0.1143,
+                "cosine": 0.1143,
+                "graph": 1.0
+              }
+            },
+            "final_score": 0.5479,
+            "entity_ids": [
+              "e_d25001dad521a7ee",
+              "e_3f685b2d848919cf"
+            ],
+            "uncertainty": []
+          },
+          {
+            "id": "E5",
+            "revision": "nogit+c2db680b30",
+            "path": "README.md",
+            "start_line": 8,
+            "end_line": 9,
+            "symbol": "Usage",
+            "chunk_id": "b7775b031bea638e",
+            "language": "markdown",
+            "methods": [
+              "graph",
+              "semantic"
+            ],
+            "scores": {
+              "components": {
+                "semantic": 0.7149,
+                "graph": 1.0,
+                "lexical": 0.0,
+                "recency": 0.0
+              },
+              "raw": {
+                "semantic": 0.1194,
+                "cosine": 0.1194,
+                "graph": 1.0
+              }
+            },
+            "final_score": 0.5217,
+            "entity_ids": [
+              "e_2f826706c968e26a"
+            ],
+            "uncertainty": [
+              "File parse status: text_only (heuristic structure)"
+            ]
+          }
+        ]
+      }
+    }
+  ],
+  "evidence": [],
+  "verification": {
+    "total": 0,
+    "citation_valid": 0,
+    "unverified": 0,
+    "removed": 0,
+    "uncited": 0,
+    "claims_with_evidence": 0,
+    "citation_coverage": null,
+    "note": "Citation validity means the cited lines exist in the indexed revision and match the stored chunk; it does not prove the claim's interpretation is correct."
+  },
+  "uncertainty": [
+    "Semantic signal uses the hashing fallback embedder (vocabulary overlap, not meaning)."
+  ],
+  "errors": [],
+  "ai": {
+    "used": false,
+    "model": null,
+    "error": "AI interpretation disabled for this request"
+  },
+  "stale_index": false,
+  "generated_at": "2026-10-28T07:37:03+00:00",
+  "engine": "sequential-fallback (langgraph not installed)",
+  "elapsed_s": 0.01
+}

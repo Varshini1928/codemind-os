@@ -1,0 +1,20 @@
+# CodeMind OS runtime dependencies (all free / open source). Versions were chosen for mutual compatibility on
+# Python 3.11 but could not be install-tested in the authoring sandbox (no network) - see docs/IMPLEMENTATION_STATUS.md.
+fastapi==0.115.6              # MIT
+uvicorn==0.34.0               # BSD-3
+pydantic==2.10.4              # MIT
+networkx==3.4.2               # BSD-3
+numpy==1.26.4                 # BSD-3
+chromadb==0.6.3               # Apache-2.0
+sentence-transformers==3.3.1  # Apache-2.0 (model weights have their own licences)
+langgraph==0.2.60             # MIT
+requests==2.32.3              # Apache-2.0
+PyYAML==6.0.2                 # MIT
+psutil==6.1.1                 # BSD-3
+httpx==0.28.1                 # BSD-3 (FastAPI TestClient)
+# Optional Tree-sitter grammars (without them regex fallback parsing is used and labelled heuristic):
+tree-sitter==0.23.2           # MIT
+tree-sitter-javascript==0.23.1
+tree-sitter-typescript==0.23.2
+tree-sitter-java==0.23.5
+tree-sitter-go==0.23.4

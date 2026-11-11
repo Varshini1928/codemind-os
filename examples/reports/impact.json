@@ -1,0 +1,736 @@
+{
+  "repository_id": "sample-repo-e1af7bd4",
+  "revision": "nogit+c2db680b30",
+  "request": "Impact of changing inventory.service.add_stock",
+  "tasks": [
+    "impact"
+  ],
+  "status": "complete",
+  "summary": "5 direct and 0 transitive dependent(s), 3 related test(s), 0 configuration key(s) (depth 3). Static analysis only: dynamic dependencies are not covered.",
+  "sections": [
+    {
+      "task": "impact",
+      "question": "Impact of changing inventory.service.add_stock",
+      "elapsed_s": 0.01,
+      "summary": "5 direct and 0 transitive dependent(s), 3 related test(s), 0 configuration key(s) (depth 3). Static analysis only: dynamic dependencies are not covered.",
+      "mode": "deterministic",
+      "insufficient": false,
+      "notes": [
+        "Dynamic dispatch, reflection, runtime-loaded plugins, remote APIs and cross-language calls are not visible to static analysis; coverage of dependents is therefore not complete.",
+        "AI risk summary skipped: AI interpretation disabled for this request"
+      ],
+      "errors": [],
+      "claims": [
+        {
+          "text": "`inventory.api.post_add` directly depends on `inventory.service.add_stock` via CALLS (statically resolved) at `inventory/api.py` line 16.",
+          "kind": "fact",
+          "evidence_ids": [
+            "E1"
+          ],
+          "status": "citation-valid",
+          "notes": [],
+          "citations": [
+            {
+              "citation": {
+                "revision": "nogit+c2db680b30",
+                "path": "inventory/api.py",
+                "start_line": 16,
+                "end_line": 16,
+                "symbol": "inventory.api.post_add",
+                "chunk_id": "35cc2f85e344389a"
+              },
+              "valid": true,
+              "checks": {
+                "path_in_repository": true,
+                "line_range_valid": true,
+                "revision_matches": true,
+                "chunk_matches_source": true
+              },
+              "reason": "",
+              "semantic_correctness": "not verified"
+            }
+          ]
+        },
+        {
+          "text": "`tests.test_service.test_add_stock` directly depends on `inventory.service.add_stock` via CALLS (statically resolved) at `tests/test_service.py` line 8.",
+          "kind": "fact",
+          "evidence_ids": [
+            "E2"
+          ],
+          "status": "citation-valid",
+          "notes": [],
+          "citations": [
+            {
+              "citation": {
+                "revision": "nogit+c2db680b30",
+                "path": "tests/test_service.py",
+                "start_line": 8,
+                "end_line": 8,
+                "symbol": "tests.test_service.test_add_stock",
+                "chunk_id": "39ffea781c5277de"
+              },
+              "valid": true,
+              "checks": {
+                "path_in_repository": true,
+                "line_range_valid": true,
+                "revision_matches": true,
+                "chunk_matches_source": true
+              },
+              "reason": "",
+              "semantic_correctness": "not verified"
+            }
+          ]
+        },
+        {
+          "text": "`tests.test_service.test_add_stock_rejects_zero` directly depends on `inventory.service.add_stock` via CALLS (statically resolved) at `tests/test_service.py` line 14.",
+          "kind": "fact",
+          "evidence_ids": [
+            "E3"
+          ],
+          "status": "citation-valid",
+          "notes": [],
+          "citations": [
+            {
+              "citation": {
+                "revision": "nogit+c2db680b30",
+                "path": "tests/test_service.py",
+                "start_line": 14,
+                "end_line": 14,
+                "symbol": "tests.test_service.test_add_stock_rejects_zero",
+                "chunk_id": "08c69edafb44cdfd"
+              },
+              "valid": true,
+              "checks": {
+                "path_in_repository": true,
+                "line_range_valid": true,
+                "revision_matches": true,
+                "chunk_matches_source": true
+              },
+              "reason": "",
+              "semantic_correctness": "not verified"
+            }
+          ]
+        },
+        {
+          "text": "`inventory.api` directly depends on `inventory.service.add_stock` via IMPORTS (statically resolved) at `inventory/api.py` line 3.",
+          "kind": "fact",
+          "evidence_ids": [
+            "E4"
+          ],
+          "status": "citation-valid",
+          "notes": [],
+          "citations": [
+            {
+              "citation": {
+                "revision": "nogit+c2db680b30",
+                "path": "inventory/api.py",
+                "start_line": 3,
+                "end_line": 3,
+                "symbol": "inventory.api",
+                "chunk_id": "8da780cea6e1ae39"
+              },
+              "valid": true,
+              "checks": {
+                "path_in_repository": true,
+                "line_range_valid": true,
+                "revision_matches": true,
+                "chunk_matches_source": true
+              },
+              "reason": "",
+              "semantic_correctness": "not verified"
+            }
+          ]
+        },
+        {
+          "text": "`tests.test_service` directly depends on `inventory.service.add_stock` via IMPORTS (statically resolved) at `tests/test_service.py` line 4.",
+          "kind": "fact",
+          "evidence_ids": [
+            "E5"
+          ],
+          "status": "citation-valid",
+          "notes": [],
+          "citations": [
+            {
+              "citation": {
+                "revision": "nogit+c2db680b30",
+                "path": "tests/test_service.py",
+                "start_line": 4,
+                "end_line": 4,
+                "symbol": "tests.test_service",
+                "chunk_id": "cfa8e4e67ab25ff0"
+              },
+              "valid": true,
+              "checks": {
+                "path_in_repository": true,
+                "line_range_valid": true,
+                "revision_matches": true,
+                "chunk_matches_source": true
+              },
+              "reason": "",
+              "semantic_correctness": "not verified"
+            }
+          ]
+        },
+        {
+          "text": "Test `tests.test_service.test_add_stock` is related to the change (statically resolved); linked by a static call from the test.",
+          "kind": "fact",
+          "evidence_ids": [
+            "E2"
+          ],
+          "status": "citation-valid",
+          "notes": [],
+          "citations": [
+            {
+              "citation": {
+                "revision": "nogit+c2db680b30",
+                "path": "tests/test_service.py",
+                "start_line": 8,
+                "end_line": 8,
+                "symbol": "tests.test_service.test_add_stock",
+                "chunk_id": "39ffea781c5277de"
+              },
+              "valid": true,
+              "checks": {
+                "path_in_repository": true,
+                "line_range_valid": true,
+                "revision_matches": true,
+                "chunk_matches_source": true
+              },
+              "reason": "",
+              "semantic_correctness": "not verified"
+            }
+          ]
+        },
+        {
+          "text": "Test `tests.test_service.test_add_stock_rejects_zero` is related to the change (statically resolved); linked by a static call from the test.",
+          "kind": "fact",
+          "evidence_ids": [
+            "E3"
+          ],
+          "status": "citation-valid",
+          "notes": [],
+          "citations": [
+            {
+              "citation": {
+                "revision": "nogit+c2db680b30",
+                "path": "tests/test_service.py",
+                "start_line": 14,
+                "end_line": 14,
+                "symbol": "tests.test_service.test_add_stock_rejects_zero",
+                "chunk_id": "08c69edafb44cdfd"
+              },
+              "valid": true,
+              "checks": {
+                "path_in_repository": true,
+                "line_range_valid": true,
+                "revision_matches": true,
+                "chunk_matches_source": true
+              },
+              "reason": "",
+              "semantic_correctness": "not verified"
+            }
+          ]
+        },
+        {
+          "text": "Test `tests.test_service` is related to the change (heuristic); test module imports the affected module; whether it exercises the change is unknown",
+          "kind": "fact",
+          "evidence_ids": [
+            "E5"
+          ],
+          "status": "citation-valid",
+          "notes": [],
+          "citations": [
+            {
+              "citation": {
+                "revision": "nogit+c2db680b30",
+                "path": "tests/test_service.py",
+                "start_line": 4,
+                "end_line": 4,
+                "symbol": "tests.test_service",
+                "chunk_id": "cfa8e4e67ab25ff0"
+              },
+              "valid": true,
+              "checks": {
+                "path_in_repository": true,
+                "line_range_valid": true,
+                "revision_matches": true,
+                "chunk_matches_source": true
+              },
+              "reason": "",
+              "semantic_correctness": "not verified"
+            }
+          ]
+        },
+        {
+          "text": "Affected symbol exposes endpoint `POST /stock/{sku}/add` (heuristic): externally visible behaviour may change.",
+          "kind": "interpretation",
+          "evidence_ids": [
+            "E6"
+          ],
+          "status": "citation-valid",
+          "notes": [],
+          "citations": [
+            {
+              "citation": {
+                "revision": "nogit+c2db680b30",
+                "path": "inventory/api.py",
+                "start_line": 14,
+                "end_line": 14,
+                "symbol": "endpoint:POST:/stock/{sku}/add:inventory.api.post_add",
+                "chunk_id": "35cc2f85e344389a"
+              },
+              "valid": true,
+              "checks": {
+                "path_in_repository": true,
+                "line_range_valid": true,
+                "revision_matches": true,
+                "chunk_matches_source": true
+              },
+              "reason": "",
+              "semantic_correctness": "not verified"
+            }
+          ]
+        },
+        {
+          "text": "Documentation `docs/overview.md` lines 1-3 mentions the target and may need an update.",
+          "kind": "interpretation",
+          "evidence_ids": [
+            "E7"
+          ],
+          "status": "citation-valid",
+          "notes": [],
+          "citations": [
+            {
+              "citation": {
+                "revision": "nogit+c2db680b30",
+                "path": "docs/overview.md",
+                "start_line": 1,
+                "end_line": 3,
+                "symbol": "Overview",
+                "chunk_id": "15d9c6040afaa6fa"
+              },
+              "valid": true,
+              "checks": {
+                "path_in_repository": true,
+                "line_range_valid": true,
+                "revision_matches": true,
+                "chunk_matches_source": true
+              },
+              "reason": "",
+              "semantic_correctness": "not verified"
+            }
+          ]
+        }
+      ],
+      "payload": {
+        "target": {
+          "input": "inventory.service.add_stock",
+          "resolved_as": "symbol",
+          "nodes": [
+            {
+              "id": "e_7dd50c6d6b398f49",
+              "type": "Function",
+              "name": "add_stock",
+              "qualified_name": "inventory.service.add_stock",
+              "path": "inventory/service.py",
+              "start_line": 9,
+              "end_line": 14,
+              "depth": 0,
+              "via": "",
+              "resolution": "resolved",
+              "from": "",
+              "edge_line": 0,
+              "edge_path": ""
+            }
+          ]
+        },
+        "documentation_to_review": [
+          {
+            "path": "docs/overview.md",
+            "lines": "1-3",
+            "evidence_ids": [
+              "E7"
+            ]
+          }
+        ],
+        "direct_dependents": [
+          {
+            "id": "e_d25001dad521a7ee",
+            "type": "Function",
+            "name": "post_add",
+            "qualified_name": "inventory.api.post_add",
+            "path": "inventory/api.py",
+            "start_line": 14,
+            "end_line": 16,
+            "depth": 1,
+            "via": "CALLS",
+            "resolution": "resolved",
+            "from": "e_7dd50c6d6b398f49",
+            "edge_line": 16,
+            "edge_path": "inventory/api.py",
+            "evidence_ids": [
+              "E1"
+            ],
+            "label": "statically resolved"
+          },
+          {
+            "id": "e_72685c5f6eec1299",
+            "type": "Test",
+            "name": "test_add_stock",
+            "qualified_name": "tests.test_service.test_add_stock",
+            "path": "tests/test_service.py",
+            "start_line": 7,
+            "end_line": 9,
+            "depth": 1,
+            "via": "CALLS",
+            "resolution": "resolved",
+            "from": "e_7dd50c6d6b398f49",
+            "edge_line": 8,
+            "edge_path": "tests/test_service.py",
+            "evidence_ids": [
+              "E2"
+            ],
+            "label": "statically resolved"
+          },
+          {
+            "id": "e_1740fb9bac7c9f18",
+            "type": "Test",
+            "name": "test_add_stock_rejects_zero",
+            "qualified_name": "tests.test_service.test_add_stock_rejects_zero",
+            "path": "tests/test_service.py",
+            "start_line": 12,
+            "end_line": 14,
+            "depth": 1,
+            "via": "CALLS",
+            "resolution": "resolved",
+            "from": "e_7dd50c6d6b398f49",
+            "edge_line": 14,
+            "edge_path": "tests/test_service.py",
+            "evidence_ids": [
+              "E3"
+            ],
+            "label": "statically resolved"
+          },
+          {
+            "id": "e_2cad1debd53fb74d",
+            "type": "Module",
+            "name": "api",
+            "qualified_name": "inventory.api",
+            "path": "inventory/api.py",
+            "start_line": 1,
+            "end_line": 21,
+            "depth": 1,
+            "via": "IMPORTS",
+            "resolution": "resolved",
+            "from": "e_7dd50c6d6b398f49",
+            "edge_line": 3,
+            "edge_path": "inventory/api.py",
+            "evidence_ids": [
+              "E4"
+            ],
+            "label": "statically resolved"
+          },
+          {
+            "id": "e_e4b5925256643e78",
+            "type": "Module",
+            "name": "test_service",
+            "qualified_name": "tests.test_service",
+            "path": "tests/test_service.py",
+            "start_line": 1,
+            "end_line": 18,
+            "depth": 1,
+            "via": "IMPORTS",
+            "resolution": "resolved",
+            "from": "e_7dd50c6d6b398f49",
+            "edge_line": 4,
+            "edge_path": "tests/test_service.py",
+            "evidence_ids": [
+              "E5"
+            ],
+            "label": "statically resolved"
+          }
+        ],
+        "transitive_dependents": [],
+        "implementations": [],
+        "tests": [
+          {
+            "id": "e_72685c5f6eec1299",
+            "type": "Test",
+            "name": "test_add_stock",
+            "qualified_name": "tests.test_service.test_add_stock",
+            "path": "tests/test_service.py",
+            "start_line": 7,
+            "end_line": 9,
+            "depth": 1,
+            "via": "TESTS",
+            "resolution": "resolved",
+            "from": "e_7dd50c6d6b398f49",
+            "edge_line": 8,
+            "edge_path": "tests/test_service.py",
+            "evidence_ids": [
+              "E2"
+            ],
+            "label": "statically resolved"
+          },
+          {
+            "id": "e_1740fb9bac7c9f18",
+            "type": "Test",
+            "name": "test_add_stock_rejects_zero",
+            "qualified_name": "tests.test_service.test_add_stock_rejects_zero",
+            "path": "tests/test_service.py",
+            "start_line": 12,
+            "end_line": 14,
+            "depth": 1,
+            "via": "TESTS",
+            "resolution": "resolved",
+            "from": "e_7dd50c6d6b398f49",
+            "edge_line": 14,
+            "edge_path": "tests/test_service.py",
+            "evidence_ids": [
+              "E3"
+            ],
+            "label": "statically resolved"
+          },
+          {
+            "id": "e_e4b5925256643e78",
+            "type": "Module",
+            "name": "test_service",
+            "qualified_name": "tests.test_service",
+            "path": "tests/test_service.py",
+            "start_line": 1,
+            "end_line": 18,
+            "depth": 1,
+            "via": "IMPORTS",
+            "resolution": "heuristic",
+            "from": "e_fa8ed13e22819bc0",
+            "edge_line": 4,
+            "edge_path": "tests/test_service.py",
+            "note": "test module imports the affected module; whether it exercises the change is unknown",
+            "evidence_ids": [
+              "E5"
+            ],
+            "label": "heuristic"
+          }
+        ],
+        "configuration": [],
+        "exposed_endpoints": [
+          {
+            "id": "e_3f685b2d848919cf",
+            "type": "Endpoint",
+            "name": "POST /stock/{sku}/add",
+            "qualified_name": "endpoint:POST:/stock/{sku}/add:inventory.api.post_add",
+            "path": "inventory/api.py",
+            "start_line": 14,
+            "end_line": 16,
+            "depth": 1,
+            "via": "EXPOSES",
+            "resolution": "heuristic",
+            "from": "e_d25001dad521a7ee",
+            "edge_line": 14,
+            "edge_path": "inventory/api.py",
+            "evidence_ids": [
+              "E6"
+            ],
+            "label": "heuristic"
+          }
+        ],
+        "dependencies": [],
+        "unresolved_possible_callers": [],
+        "limits": [
+          "Dynamic dispatch, reflection, runtime-loaded plugins, remote APIs and cross-language calls are not visible to static analysis; coverage of dependents is therefore not complete."
+        ],
+        "max_depth": 3,
+        "recommended_tests": {
+          "to_run": [
+            "tests/test_service.py"
+          ],
+          "note": "Suggestions only - tests are never executed automatically."
+        },
+        "labels": {
+          "statically resolved": "edge found by static name resolution",
+          "heuristic": "plausible but unproven (decorator/naming/text match)",
+          "unresolved": "possible callers that static analysis could not link"
+        }
+      }
+    }
+  ],
+  "evidence": [
+    {
+      "id": "E1",
+      "revision": "nogit+c2db680b30",
+      "path": "inventory/api.py",
+      "start_line": 16,
+      "end_line": 16,
+      "symbol": "inventory.api.post_add",
+      "chunk_id": "35cc2f85e344389a",
+      "language": "python",
+      "methods": [
+        "graph"
+      ],
+      "scores": {},
+      "final_score": 0.0,
+      "entity_ids": [
+        "e_d25001dad521a7ee",
+        "e_3f685b2d848919cf"
+      ],
+      "uncertainty": [],
+      "text": "    return add_stock(PRODUCTS[0], amount).quantity"
+    },
+    {
+      "id": "E2",
+      "revision": "nogit+c2db680b30",
+      "path": "tests/test_service.py",
+      "start_line": 8,
+      "end_line": 8,
+      "symbol": "tests.test_service.test_add_stock",
+      "chunk_id": "39ffea781c5277de",
+      "language": "python",
+      "methods": [
+        "graph"
+      ],
+      "scores": {},
+      "final_score": 0.0,
+      "entity_ids": [
+        "e_72685c5f6eec1299"
+      ],
+      "uncertainty": [],
+      "text": "    p = add_stock(Product(\"A\", 1), 2)"
+    },
+    {
+      "id": "E3",
+      "revision": "nogit+c2db680b30",
+      "path": "tests/test_service.py",
+      "start_line": 14,
+      "end_line": 14,
+      "symbol": "tests.test_service.test_add_stock_rejects_zero",
+      "chunk_id": "08c69edafb44cdfd",
+      "language": "python",
+      "methods": [
+        "graph"
+      ],
+      "scores": {},
+      "final_score": 0.0,
+      "entity_ids": [
+        "e_1740fb9bac7c9f18"
+      ],
+      "uncertainty": [],
+      "text": "        add_stock(Product(\"A\"), 0)"
+    },
+    {
+      "id": "E4",
+      "revision": "nogit+c2db680b30",
+      "path": "inventory/api.py",
+      "start_line": 3,
+      "end_line": 3,
+      "symbol": "inventory.api",
+      "chunk_id": "8da780cea6e1ae39",
+      "language": "python",
+      "methods": [
+        "graph"
+      ],
+      "scores": {},
+      "final_score": 0.0,
+      "entity_ids": [
+        "e_2cad1debd53fb74d"
+      ],
+      "uncertainty": [],
+      "text": "from inventory.service import add_stock, apply_discount, stock_report"
+    },
+    {
+      "id": "E5",
+      "revision": "nogit+c2db680b30",
+      "path": "tests/test_service.py",
+      "start_line": 4,
+      "end_line": 4,
+      "symbol": "tests.test_service",
+      "chunk_id": "cfa8e4e67ab25ff0",
+      "language": "python",
+      "methods": [
+        "graph"
+      ],
+      "scores": {},
+      "final_score": 0.0,
+      "entity_ids": [
+        "e_e4b5925256643e78"
+      ],
+      "uncertainty": [],
+      "text": "from inventory.service import add_stock, apply_discount"
+    },
+    {
+      "id": "E6",
+      "revision": "nogit+c2db680b30",
+      "path": "inventory/api.py",
+      "start_line": 14,
+      "end_line": 14,
+      "symbol": "endpoint:POST:/stock/{sku}/add:inventory.api.post_add",
+      "chunk_id": "35cc2f85e344389a",
+      "language": "python",
+      "methods": [
+        "graph"
+      ],
+      "scores": {},
+      "final_score": 0.0,
+      "entity_ids": [
+        "e_d25001dad521a7ee",
+        "e_3f685b2d848919cf"
+      ],
+      "uncertainty": [],
+      "text": "@app.post(\"/stock/{sku}/add\")"
+    },
+    {
+      "id": "E7",
+      "revision": "nogit+c2db680b30",
+      "path": "docs/overview.md",
+      "start_line": 1,
+      "end_line": 3,
+      "symbol": "Overview",
+      "chunk_id": "15d9c6040afaa6fa",
+      "language": "markdown",
+      "methods": [
+        "lexical"
+      ],
+      "scores": {
+        "components": {
+          "semantic": 0.0,
+          "graph": 0.0,
+          "lexical": 1.0,
+          "recency": 0.0
+        },
+        "raw": {
+          "lexical": 4.8849,
+          "bm25": 4.8849
+        }
+      },
+      "final_score": 1.0,
+      "entity_ids": [
+        "e_079e2e786e3a7e46"
+      ],
+      "uncertainty": [],
+      "text": "# Overview\n\nThe `apply_discount` function computes prices. `add_stock` increases inventory."
+    }
+  ],
+  "verification": {
+    "total": 10,
+    "citation_valid": 10,
+    "unverified": 0,
+    "removed": 0,
+    "uncited": 0,
+    "claims_with_evidence": 10,
+    "citation_coverage": 1.0,
+    "note": "Citation validity means the cited lines exist in the indexed revision and match the stored chunk; it does not prove the claim's interpretation is correct."
+  },
+  "uncertainty": [
+    "Dynamic dispatch, reflection, runtime-loaded plugins, remote APIs and cross-language calls are not visible to static analysis; coverage of dependents is therefore not complete.",
+    "AI risk summary skipped: AI interpretation disabled for this request"
+  ],
+  "errors": [],
+  "ai": {
+    "used": false,
+    "model": null,
+    "error": "AI interpretation disabled for this request"
+  },
+  "stale_index": false,
+  "generated_at": "2026-10-28T07:37:02+00:00",
+  "engine": "sequential-fallback (langgraph not installed)",
+  "elapsed_s": 0.02
+}

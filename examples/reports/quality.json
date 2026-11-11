@@ -1,0 +1,602 @@
+{
+  "repository_id": "sample-repo-e1af7bd4",
+  "revision": "nogit+c2db680b30",
+  "request": "Review code quality and security",
+  "tasks": [
+    "quality"
+  ],
+  "status": "complete",
+  "summary": "8 candidate finding(s): 2 high, 4 medium, 1 low, 1 info",
+  "sections": [
+    {
+      "task": "quality",
+      "question": "Review code quality and security",
+      "elapsed_s": 0.02,
+      "summary": "8 candidate finding(s): 2 high, 4 medium, 1 low, 1 info",
+      "mode": "deterministic",
+      "insufficient": false,
+      "notes": [
+        "AI review skipped: AI interpretation disabled for this request"
+      ],
+      "errors": [],
+      "claims": [
+        {
+          "text": "[HIGH] subprocess call with `shell=True` at `inventory/utils.py` line 13: Shell invocation enables command injection when any part of the command is user-controlled.",
+          "kind": "fact",
+          "evidence_ids": [
+            "E5"
+          ],
+          "status": "citation-valid",
+          "notes": [],
+          "citations": [
+            {
+              "citation": {
+                "revision": "nogit+c2db680b30",
+                "path": "inventory/utils.py",
+                "start_line": 13,
+                "end_line": 13,
+                "symbol": "inventory.utils.run_command",
+                "chunk_id": "648f213d81710d24"
+              },
+              "valid": true,
+              "checks": {
+                "path_in_repository": true,
+                "line_range_valid": true,
+                "revision_matches": true,
+                "chunk_matches_source": true
+              },
+              "reason": "",
+              "semantic_correctness": "not verified"
+            }
+          ]
+        },
+        {
+          "text": "[HIGH] Use of `eval` at `inventory/utils.py` line 17: `eval` executes dynamically built code; untrusted input would lead to code execution.",
+          "kind": "fact",
+          "evidence_ids": [
+            "E6"
+          ],
+          "status": "citation-valid",
+          "notes": [],
+          "citations": [
+            {
+              "citation": {
+                "revision": "nogit+c2db680b30",
+                "path": "inventory/utils.py",
+                "start_line": 17,
+                "end_line": 17,
+                "symbol": "inventory.utils.legacy_calc",
+                "chunk_id": "850c3fefcf405dee"
+              },
+              "valid": true,
+              "checks": {
+                "path_in_repository": true,
+                "line_range_valid": true,
+                "revision_matches": true,
+                "chunk_matches_source": true
+              },
+              "reason": "",
+              "semantic_correctness": "not verified"
+            }
+          ]
+        },
+        {
+          "text": "[MEDIUM] Hard-coded credential-like value in `WEBHOOK_PASSWORD` at `inventory/notifier.py` line 6: Credentials committed to source control are exposed to everyone with repository access (value redacted).",
+          "kind": "fact",
+          "evidence_ids": [
+            "E1"
+          ],
+          "status": "citation-valid",
+          "notes": [],
+          "citations": [
+            {
+              "citation": {
+                "revision": "nogit+c2db680b30",
+                "path": "inventory/notifier.py",
+                "start_line": 6,
+                "end_line": 6,
+                "symbol": "<module>",
+                "chunk_id": "3dd3aabc7f4a5154"
+              },
+              "valid": true,
+              "checks": {
+                "path_in_repository": true,
+                "line_range_valid": true,
+                "revision_matches": true,
+                "chunk_matches_source": true
+              },
+              "reason": "",
+              "semantic_correctness": "not verified"
+            }
+          ]
+        },
+        {
+          "text": "[MEDIUM] Bare `except:` clause at `inventory/notifier.py` line 13: Catches every exception including KeyboardInterrupt/SystemExit and can hide bugs.",
+          "kind": "fact",
+          "evidence_ids": [
+            "E2"
+          ],
+          "status": "citation-valid",
+          "notes": [],
+          "citations": [
+            {
+              "citation": {
+                "revision": "nogit+c2db680b30",
+                "path": "inventory/notifier.py",
+                "start_line": 13,
+                "end_line": 14,
+                "symbol": "inventory.notifier.notify_low_stock",
+                "chunk_id": "18752e9fa7358510"
+              },
+              "valid": true,
+              "checks": {
+                "path_in_repository": true,
+                "line_range_valid": true,
+                "revision_matches": true,
+                "chunk_matches_source": true
+              },
+              "reason": "",
+              "semantic_correctness": "not verified"
+            }
+          ]
+        },
+        {
+          "text": "[MEDIUM] Mutable default argument at `inventory/service.py` line 17: The default object is shared between calls and can leak state.",
+          "kind": "fact",
+          "evidence_ids": [
+            "E4"
+          ],
+          "status": "citation-valid",
+          "notes": [],
+          "citations": [
+            {
+              "citation": {
+                "revision": "nogit+c2db680b30",
+                "path": "inventory/service.py",
+                "start_line": 17,
+                "end_line": 17,
+                "symbol": "inventory.service.remove_stock",
+                "chunk_id": "5502d30c8df441a5"
+              },
+              "valid": true,
+              "checks": {
+                "path_in_repository": true,
+                "line_range_valid": true,
+                "revision_matches": true,
+                "chunk_matches_source": true
+              },
+              "reason": "",
+              "semantic_correctness": "not verified"
+            }
+          ]
+        },
+        {
+          "text": "[MEDIUM] Debug mode enabled at `main.py` line 7: Debug servers can expose interactive consoles and stack traces.",
+          "kind": "fact",
+          "evidence_ids": [
+            "E7"
+          ],
+          "status": "citation-valid",
+          "notes": [],
+          "citations": [
+            {
+              "citation": {
+                "revision": "nogit+c2db680b30",
+                "path": "main.py",
+                "start_line": 7,
+                "end_line": 7,
+                "symbol": "main.main",
+                "chunk_id": "959918d3fe486ccc"
+              },
+              "valid": true,
+              "checks": {
+                "path_in_repository": true,
+                "line_range_valid": true,
+                "revision_matches": true,
+                "chunk_matches_source": true
+              },
+              "reason": "",
+              "semantic_correctness": "not verified"
+            }
+          ]
+        },
+        {
+          "text": "[LOW] `requests.post` without timeout at `inventory/notifier.py` line 11: A missing timeout can block a worker indefinitely.",
+          "kind": "fact",
+          "evidence_ids": [
+            "E3"
+          ],
+          "status": "citation-valid",
+          "notes": [],
+          "citations": [
+            {
+              "citation": {
+                "revision": "nogit+c2db680b30",
+                "path": "inventory/notifier.py",
+                "start_line": 11,
+                "end_line": 11,
+                "symbol": "inventory.notifier.notify_low_stock",
+                "chunk_id": "18752e9fa7358510"
+              },
+              "valid": true,
+              "checks": {
+                "path_in_repository": true,
+                "line_range_valid": true,
+                "revision_matches": true,
+                "chunk_matches_source": true
+              },
+              "reason": "",
+              "semantic_correctness": "not verified"
+            }
+          ]
+        },
+        {
+          "text": "[INFO] Open TODO/FIXME marker at `inventory/service.py` line 35: # TODO: add pagination",
+          "kind": "fact",
+          "evidence_ids": [
+            "E8"
+          ],
+          "status": "citation-valid",
+          "notes": [],
+          "citations": [
+            {
+              "citation": {
+                "revision": "nogit+c2db680b30",
+                "path": "inventory/service.py",
+                "start_line": 35,
+                "end_line": 35,
+                "symbol": "inventory.service.stock_report",
+                "chunk_id": "4ed3d0d2be2349b5"
+              },
+              "valid": true,
+              "checks": {
+                "path_in_repository": true,
+                "line_range_valid": true,
+                "revision_matches": true,
+                "chunk_matches_source": true
+              },
+              "reason": "",
+              "semantic_correctness": "not verified"
+            }
+          ]
+        }
+      ],
+      "payload": {
+        "findings": [
+          {
+            "path": "inventory/utils.py",
+            "line": 13,
+            "end": 13,
+            "title": "subprocess call with `shell=True`",
+            "severity": "high",
+            "category": "security",
+            "explanation": "Shell invocation enables command injection when any part of the command is user-controlled.",
+            "uncertainty": "Whether the command string includes untrusted data was not analysed.",
+            "next_step": "Pass an argument list and drop shell=True.",
+            "method": "ast-rule:shell-true",
+            "confidence": "candidate (rule match; not a confirmed defect)",
+            "id": "F1",
+            "evidence_ids": [
+              "E5"
+            ]
+          },
+          {
+            "path": "inventory/utils.py",
+            "line": 17,
+            "end": 17,
+            "title": "Use of `eval`",
+            "severity": "high",
+            "category": "security",
+            "explanation": "`eval` executes dynamically built code; untrusted input would lead to code execution.",
+            "uncertainty": "Safe only if the argument is fully trusted; data flow was not analysed.",
+            "next_step": "Replace with ast.literal_eval or explicit parsing.",
+            "method": "ast-rule:eval-exec",
+            "confidence": "candidate (rule match; not a confirmed defect)",
+            "id": "F2",
+            "evidence_ids": [
+              "E6"
+            ]
+          },
+          {
+            "path": "inventory/notifier.py",
+            "line": 6,
+            "end": 6,
+            "title": "Hard-coded credential-like value in `WEBHOOK_PASSWORD`",
+            "severity": "medium",
+            "category": "security",
+            "explanation": "Credentials committed to source control are exposed to everyone with repository access (value redacted).",
+            "uncertainty": "Could be a placeholder, test value or non-secret.",
+            "next_step": "Load secrets from the environment or a secret store.",
+            "method": "ast-rule:hardcoded-credential",
+            "confidence": "candidate (rule match; not a confirmed defect)",
+            "id": "F3",
+            "evidence_ids": [
+              "E1"
+            ]
+          },
+          {
+            "path": "inventory/notifier.py",
+            "line": 13,
+            "end": 14,
+            "title": "Bare `except:` clause",
+            "severity": "medium",
+            "category": "reliability",
+            "explanation": "Catches every exception including KeyboardInterrupt/SystemExit and can hide bugs.",
+            "uncertainty": "May be intentional at a process boundary.",
+            "next_step": "Catch specific exceptions and log or re-raise.",
+            "method": "ast-rule:bare-except",
+            "confidence": "candidate (rule match; not a confirmed defect)",
+            "id": "F4",
+            "evidence_ids": [
+              "E2"
+            ]
+          },
+          {
+            "path": "inventory/service.py",
+            "line": 17,
+            "end": 17,
+            "title": "Mutable default argument",
+            "severity": "medium",
+            "category": "correctness",
+            "explanation": "The default object is shared between calls and can leak state.",
+            "uncertainty": "Only a problem if it is mutated.",
+            "next_step": "Use None and create the object inside the function.",
+            "method": "ast-rule:mutable-default",
+            "confidence": "candidate (rule match; not a confirmed defect)",
+            "id": "F5",
+            "evidence_ids": [
+              "E4"
+            ]
+          },
+          {
+            "path": "main.py",
+            "line": 7,
+            "end": 7,
+            "title": "Debug mode enabled",
+            "severity": "medium",
+            "category": "security",
+            "explanation": "Debug servers can expose interactive consoles and stack traces.",
+            "uncertainty": "May only run in development.",
+            "next_step": "Disable debug outside local development.",
+            "method": "ast-rule:debug-enabled",
+            "confidence": "candidate (rule match; not a confirmed defect)",
+            "id": "F6",
+            "evidence_ids": [
+              "E7"
+            ]
+          },
+          {
+            "path": "inventory/notifier.py",
+            "line": 11,
+            "end": 11,
+            "title": "`requests.post` without timeout",
+            "severity": "low",
+            "category": "reliability",
+            "explanation": "A missing timeout can block a worker indefinitely.",
+            "uncertainty": "Session-level defaults were not analysed.",
+            "next_step": "Pass an explicit timeout.",
+            "method": "ast-rule:no-timeout",
+            "confidence": "candidate (rule match; not a confirmed defect)",
+            "id": "F7",
+            "evidence_ids": [
+              "E3"
+            ]
+          },
+          {
+            "path": "inventory/service.py",
+            "line": 35,
+            "end": 35,
+            "title": "Open TODO/FIXME marker",
+            "severity": "info",
+            "category": "maintainability",
+            "explanation": "# TODO: add pagination",
+            "uncertainty": "Text match; may sit inside a string.",
+            "next_step": "Track or resolve it.",
+            "method": "text-match:todo",
+            "confidence": "candidate",
+            "id": "F8",
+            "evidence_ids": [
+              "E8"
+            ]
+          }
+        ],
+        "scope": {
+          "files_in_index": 15,
+          "python_files_scanned": 10,
+          "not_scanned": "Rule-based checks cover Python only; other languages are listed as not reviewed."
+        },
+        "severity_counts": {
+          "high": 2,
+          "medium": 4,
+          "low": 1,
+          "info": 1
+        }
+      }
+    }
+  ],
+  "evidence": [
+    {
+      "id": "E1",
+      "revision": "nogit+c2db680b30",
+      "path": "inventory/notifier.py",
+      "start_line": 6,
+      "end_line": 6,
+      "symbol": "<module>",
+      "chunk_id": "3dd3aabc7f4a5154",
+      "language": "python",
+      "methods": [
+        "static-rule"
+      ],
+      "scores": {},
+      "final_score": 0.0,
+      "entity_ids": [
+        "e_df3a5afb9399f982"
+      ],
+      "uncertainty": [],
+      "text": "WEBHOOK_PASSWORD = \"hunter2-prod\""
+    },
+    {
+      "id": "E2",
+      "revision": "nogit+c2db680b30",
+      "path": "inventory/notifier.py",
+      "start_line": 13,
+      "end_line": 14,
+      "symbol": "inventory.notifier.notify_low_stock",
+      "chunk_id": "18752e9fa7358510",
+      "language": "python",
+      "methods": [
+        "static-rule"
+      ],
+      "scores": {},
+      "final_score": 0.0,
+      "entity_ids": [
+        "e_920dd86ecfca1bc0"
+      ],
+      "uncertainty": [],
+      "text": "    except:\n        pass"
+    },
+    {
+      "id": "E3",
+      "revision": "nogit+c2db680b30",
+      "path": "inventory/notifier.py",
+      "start_line": 11,
+      "end_line": 11,
+      "symbol": "inventory.notifier.notify_low_stock",
+      "chunk_id": "18752e9fa7358510",
+      "language": "python",
+      "methods": [
+        "static-rule"
+      ],
+      "scores": {},
+      "final_score": 0.0,
+      "entity_ids": [
+        "e_920dd86ecfca1bc0"
+      ],
+      "uncertainty": [],
+      "text": "        requests.post(f\"http://{smtp_host()}/notify\", json={\"sku\": sku, \"quantity\": quantity})"
+    },
+    {
+      "id": "E4",
+      "revision": "nogit+c2db680b30",
+      "path": "inventory/service.py",
+      "start_line": 17,
+      "end_line": 17,
+      "symbol": "inventory.service.remove_stock",
+      "chunk_id": "5502d30c8df441a5",
+      "language": "python",
+      "methods": [
+        "static-rule"
+      ],
+      "scores": {},
+      "final_score": 0.0,
+      "entity_ids": [
+        "e_10e0bb88cc2fa36c"
+      ],
+      "uncertainty": [],
+      "text": "def remove_stock(product: Product, amount: int, history=[]) -> Product:"
+    },
+    {
+      "id": "E5",
+      "revision": "nogit+c2db680b30",
+      "path": "inventory/utils.py",
+      "start_line": 13,
+      "end_line": 13,
+      "symbol": "inventory.utils.run_command",
+      "chunk_id": "648f213d81710d24",
+      "language": "python",
+      "methods": [
+        "static-rule"
+      ],
+      "scores": {},
+      "final_score": 0.0,
+      "entity_ids": [
+        "e_2184585098d16a73"
+      ],
+      "uncertainty": [],
+      "text": "    return subprocess.check_output(cmd, shell=True, text=True)"
+    },
+    {
+      "id": "E6",
+      "revision": "nogit+c2db680b30",
+      "path": "inventory/utils.py",
+      "start_line": 17,
+      "end_line": 17,
+      "symbol": "inventory.utils.legacy_calc",
+      "chunk_id": "850c3fefcf405dee",
+      "language": "python",
+      "methods": [
+        "static-rule"
+      ],
+      "scores": {},
+      "final_score": 0.0,
+      "entity_ids": [
+        "e_71fbc5fc9672842e"
+      ],
+      "uncertainty": [],
+      "text": "    return eval(expression)"
+    },
+    {
+      "id": "E7",
+      "revision": "nogit+c2db680b30",
+      "path": "main.py",
+      "start_line": 7,
+      "end_line": 7,
+      "symbol": "main.main",
+      "chunk_id": "959918d3fe486ccc",
+      "language": "python",
+      "methods": [
+        "static-rule"
+      ],
+      "scores": {},
+      "final_score": 0.0,
+      "entity_ids": [
+        "e_74e346a10bf566da"
+      ],
+      "uncertainty": [],
+      "text": "    app.run(port=api_port(), debug=True)"
+    },
+    {
+      "id": "E8",
+      "revision": "nogit+c2db680b30",
+      "path": "inventory/service.py",
+      "start_line": 35,
+      "end_line": 35,
+      "symbol": "inventory.service.stock_report",
+      "chunk_id": "4ed3d0d2be2349b5",
+      "language": "python",
+      "methods": [
+        "text-match"
+      ],
+      "scores": {},
+      "final_score": 0.0,
+      "entity_ids": [
+        "e_d865956d7b7976c8"
+      ],
+      "uncertainty": [],
+      "text": "    # TODO: add pagination"
+    }
+  ],
+  "verification": {
+    "total": 8,
+    "citation_valid": 8,
+    "unverified": 0,
+    "removed": 0,
+    "uncited": 0,
+    "claims_with_evidence": 8,
+    "citation_coverage": 1.0,
+    "note": "Citation validity means the cited lines exist in the indexed revision and match the stored chunk; it does not prove the claim's interpretation is correct."
+  },
+  "uncertainty": [
+    "AI review skipped: AI interpretation disabled for this request"
+  ],
+  "errors": [],
+  "ai": {
+    "used": false,
+    "model": null,
+    "error": "AI interpretation disabled for this request"
+  },
+  "stale_index": false,
+  "generated_at": "2026-10-28T07:37:01+00:00",
+  "engine": "sequential-fallback (langgraph not installed)",
+  "elapsed_s": 0.02
+}

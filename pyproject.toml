@@ -1,0 +1,25 @@
+[project]
+name = "codemind-os"
+version = "1.0.0"
+description = "Local-first AI repository intelligence and software engineering assistant"
+requires-python = ">=3.11"
+license = { text = "MIT" }
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+addopts = "-q"
+
+[tool.ruff]
+line-length = 140
+target-version = "py311"
+exclude = ["sample_repo"]
+
+[tool.ruff.lint]
+select = ["E", "F", "W", "I", "B"]
+ignore = ["E701", "E702", "E704", "B008", "E731", "I001"]
+
+[tool.mypy]
+python_version = "3.11"
+ignore_missing_imports = true
+check_untyped_defs = false
+exclude = ["sample_repo", "tests"]

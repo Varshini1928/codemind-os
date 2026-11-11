@@ -1,0 +1,32 @@
+{
+  "description": "Hand-written expectations for the bundled synthetic sample repository (sample_repo/). Each expected item was checked by reading the file. Extend or replace it for your own repository.",
+  "repository": "sample_repo",
+  "queries": [
+    {"id": "q1", "question": "Where is apply_discount defined?", "intent": "question",
+     "expected": [{"path": "inventory/service.py", "symbol": "inventory.service.apply_discount"}]},
+    {"id": "q2", "question": "How is the low stock notification sent?", "intent": "question",
+     "expected": [{"path": "inventory/notifier.py", "symbol": "inventory.notifier.notify_low_stock"}]},
+    {"id": "q3", "question": "Which setting controls the port the API listens on?", "intent": "question",
+     "expected": [{"path": "inventory/config.py", "symbol": "inventory.config.api_port"}]},
+    {"id": "q4", "question": "How is a product identifier normalised?", "intent": "question",
+     "expected": [{"path": "inventory/utils.py", "symbol": "inventory.utils.parse_sku"}]},
+    {"id": "q5", "question": "What does the stock report endpoint return?", "intent": "question",
+     "expected": [{"path": "inventory/api.py", "symbol": "inventory.api.get_stock"}, {"path": "inventory/service.py", "symbol": "inventory.service.stock_report"}]},
+    {"id": "q6", "question": "What happens when more stock is removed than available?", "intent": "question",
+     "expected": [{"path": "inventory/service.py", "symbol": "inventory.service.remove_stock"}]},
+    {"id": "q7", "question": "How is the total value of a product computed?", "intent": "question",
+     "expected": [{"path": "inventory/models.py", "symbol": "inventory.models.Product.total_value"}]},
+    {"id": "q8", "question": "Which code runs shell commands?", "intent": "question",
+     "expected": [{"path": "inventory/utils.py", "symbol": "inventory.utils.run_command"}]},
+    {"id": "q9", "question": "What command does the container run on start?", "intent": "architecture",
+     "expected": [{"path": "Dockerfile"}]},
+    {"id": "q10", "question": "Which tests cover add_stock?", "intent": "tests",
+     "expected": [{"path": "tests/test_service.py", "symbol": "tests.test_service.test_add_stock"}]}
+  ],
+  "impact": [
+    {"target": "inventory.utils.parse_sku", "expected_files": ["inventory/service.py", "tests/test_utils.py"]},
+    {"target": "inventory.service.add_stock", "expected_files": ["inventory/api.py", "tests/test_service.py"]},
+    {"target": "inventory.config.api_port", "expected_files": ["main.py"]}
+  ],
+  "ratings": []
+}

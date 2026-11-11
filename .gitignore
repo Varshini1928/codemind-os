@@ -1,0 +1,17 @@
+__pycache__/
+*.pyc
+.venv/
+venv/
+.env
+.pytest_cache/
+.ruff_cache/
+.mypy_cache/
+# CodeMind runtime data - never commit indexes, models, logs or generated reports
+data/*
+!data/.gitkeep
+reports/*
+!reports/.gitkeep
+.codemind_os/
+*.db
+*.sqlite3
+evaluation/results/*.tmp

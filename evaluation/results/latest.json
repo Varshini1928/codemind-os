@@ -1,0 +1,113 @@
+{
+  "environment": {
+    "python": "3.12.3",
+    "embedder": "hashing-v1",
+    "vector_store": "sqlite-numpy",
+    "semantic_embeddings": false,
+    "repository_revision": "nogit+c2db680b30",
+    "files": 15,
+    "chunks": 39,
+    "queries": 10
+  },
+  "retrieval": {
+    "lexical-only": {
+      "recall@1": 0.45,
+      "recall@3": 0.7,
+      "recall@5": 0.7,
+      "mrr": 0.6,
+      "query_latency_ms_mean": 1.0248477999880379,
+      "query_latency_ms_p95": 4.633396000031098
+    },
+    "semantic-only": {
+      "recall@1": 0.15,
+      "recall@3": 0.7,
+      "recall@5": 0.7,
+      "mrr": 0.4166666666666667,
+      "query_latency_ms_mean": 0.6878416000006382,
+      "query_latency_ms_p95": 1.3088800000105039
+    },
+    "semantic+graph": {
+      "recall@1": 0.15,
+      "recall@3": 0.7,
+      "recall@5": 0.7,
+      "mrr": 0.4166666666666667,
+      "query_latency_ms_mean": 1.287824799999271,
+      "query_latency_ms_p95": 3.219139999998788
+    },
+    "full-hybrid": {
+      "recall@1": 0.65,
+      "recall@3": 0.7,
+      "recall@5": 0.7,
+      "mrr": 0.7,
+      "query_latency_ms_mean": 1.6370585000004212,
+      "query_latency_ms_p95": 1.965464000022621
+    }
+  },
+  "citations": {
+    "path": "deterministic analysis without an LLM",
+    "claims": 60,
+    "citation_coverage": 1.0,
+    "citation_precision": 1.0,
+    "note": "Citation validity != semantic correctness. LLM-path citation quality: not evaluated (run with Ollama and --llm)."
+  },
+  "impact": {
+    "inventory.utils.parse_sku": {
+      "predicted": [
+        "inventory/service.py",
+        "tests/test_service.py",
+        "tests/test_utils.py"
+      ],
+      "expected": [
+        "inventory/service.py",
+        "tests/test_utils.py"
+      ],
+      "precision": 0.6666666666666666,
+      "recall": 1.0,
+      "precision_resolved_only": 1.0,
+      "recall_resolved_only": 1.0
+    },
+    "inventory.service.add_stock": {
+      "predicted": [
+        "inventory/api.py",
+        "tests/test_service.py"
+      ],
+      "expected": [
+        "inventory/api.py",
+        "tests/test_service.py"
+      ],
+      "precision": 1.0,
+      "recall": 1.0,
+      "precision_resolved_only": 1.0,
+      "recall_resolved_only": 1.0
+    },
+    "inventory.config.api_port": {
+      "predicted": [
+        "main.py"
+      ],
+      "expected": [
+        "main.py"
+      ],
+      "precision": 1.0,
+      "recall": 1.0,
+      "precision_resolved_only": 1.0,
+      "recall_resolved_only": 1.0
+    },
+    "_mean": {
+      "precision": 0.8888888888888888,
+      "recall": 1.0,
+      "precision_resolved_only": 1.0,
+      "recall_resolved_only": 1.0
+    }
+  },
+  "performance": {
+    "indexing_latency_s": 0.104,
+    "files_indexed": 15,
+    "peak_memory_mb": 59.5,
+    "index_size_kb": 734.2,
+    "unexpected_external_connections": 0,
+    "external_hosts": []
+  },
+  "usefulness": {
+    "human_rated_usefulness": "not evaluated"
+  }
+}

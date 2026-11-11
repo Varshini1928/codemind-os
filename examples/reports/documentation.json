@@ -1,0 +1,2346 @@
+{
+  "repository_id": "sample-repo-e1af7bd4",
+  "revision": "nogit+c2db680b30",
+  "request": "Generate documentation",
+  "tasks": [
+    "documentation"
+  ],
+  "status": "complete",
+  "summary": "Generated full documentation (114 lines, 41 cited facts).",
+  "sections": [
+    {
+      "task": "documentation",
+      "question": "Generate documentation",
+      "elapsed_s": 0.01,
+      "summary": "Generated full documentation (114 lines, 41 cited facts).",
+      "mode": "deterministic",
+      "insufficient": false,
+      "notes": [
+        "AI narrative skipped: AI interpretation disabled for this request"
+      ],
+      "errors": [],
+      "claims": [
+        {
+          "text": "`main.py` is an executable entry point (`__main__` guard)",
+          "kind": "fact",
+          "evidence_ids": [
+            "E1"
+          ],
+          "status": "citation-valid",
+          "notes": [],
+          "citations": [
+            {
+              "citation": {
+                "revision": "nogit+c2db680b30",
+                "path": "main.py",
+                "start_line": 10,
+                "end_line": 11,
+                "symbol": "<module>",
+                "chunk_id": "da24270c482a414e"
+              },
+              "valid": true,
+              "checks": {
+                "path_in_repository": true,
+                "line_range_valid": true,
+                "revision_matches": true,
+                "chunk_matches_source": true
+              },
+              "reason": "",
+              "semantic_correctness": "not verified"
+            }
+          ]
+        },
+        {
+          "text": "Module docstring: Inventory package.",
+          "kind": "fact",
+          "evidence_ids": [
+            "E2"
+          ],
+          "status": "citation-valid",
+          "notes": [],
+          "citations": [
+            {
+              "citation": {
+                "revision": "nogit+c2db680b30",
+                "path": "inventory/__init__.py",
+                "start_line": 1,
+                "end_line": 1,
+                "symbol": "<module>",
+                "chunk_id": "d0cd4e0726cb395b"
+              },
+              "valid": true,
+              "checks": {
+                "path_in_repository": true,
+                "line_range_valid": true,
+                "revision_matches": true,
+                "chunk_matches_source": true
+              },
+              "reason": "",
+              "semantic_correctness": "not verified"
+            }
+          ]
+        },
+        {
+          "text": "Module docstring: HTTP routes.",
+          "kind": "fact",
+          "evidence_ids": [
+            "E3"
+          ],
+          "status": "citation-valid",
+          "notes": [],
+          "citations": [
+            {
+              "citation": {
+                "revision": "nogit+c2db680b30",
+                "path": "inventory/api.py",
+                "start_line": 1,
+                "end_line": 21,
+                "symbol": "<module>",
+                "chunk_id": "8da780cea6e1ae39"
+              },
+              "valid": true,
+              "checks": {
+                "path_in_repository": true,
+                "line_range_valid": true,
+                "revision_matches": true,
+                "chunk_matches_source": true
+              },
+              "reason": "",
+              "semantic_correctness": "not verified"
+            }
+          ]
+        },
+        {
+          "text": "Function `get_stock`: `def get_stock()`",
+          "kind": "fact",
+          "evidence_ids": [
+            "E4"
+          ],
+          "status": "citation-valid",
+          "notes": [],
+          "citations": [
+            {
+              "citation": {
+                "revision": "nogit+c2db680b30",
+                "path": "inventory/api.py",
+                "start_line": 9,
+                "end_line": 11,
+                "symbol": "inventory.api.get_stock",
+                "chunk_id": "12c74d121955e226"
+              },
+              "valid": true,
+              "checks": {
+                "path_in_repository": true,
+                "line_range_valid": true,
+                "revision_matches": true,
+                "chunk_matches_source": true
+              },
+              "reason": "",
+              "semantic_correctness": "not verified"
+            }
+          ]
+        },
+        {
+          "text": "Function `post_add`: `def post_add(sku: str, amount: int)`",
+          "kind": "fact",
+          "evidence_ids": [
+            "E5"
+          ],
+          "status": "citation-valid",
+          "notes": [],
+          "citations": [
+            {
+              "citation": {
+                "revision": "nogit+c2db680b30",
+                "path": "inventory/api.py",
+                "start_line": 14,
+                "end_line": 16,
+                "symbol": "inventory.api.post_add",
+                "chunk_id": "35cc2f85e344389a"
+              },
+              "valid": true,
+              "checks": {
+                "path_in_repository": true,
+                "line_range_valid": true,
+                "revision_matches": true,
+                "chunk_matches_source": true
+              },
+              "reason": "",
+              "semantic_correctness": "not verified"
+            }
+          ]
+        },
+        {
+          "text": "Function `get_price`: `def get_price(sku: str, discount: float=0)`",
+          "kind": "fact",
+          "evidence_ids": [
+            "E6"
+          ],
+          "status": "citation-valid",
+          "notes": [],
+          "citations": [
+            {
+              "citation": {
+                "revision": "nogit+c2db680b30",
+                "path": "inventory/api.py",
+                "start_line": 19,
+                "end_line": 21,
+                "symbol": "inventory.api.get_price",
+                "chunk_id": "9fc9fd947cecab75"
+              },
+              "valid": true,
+              "checks": {
+                "path_in_repository": true,
+                "line_range_valid": true,
+                "revision_matches": true,
+                "chunk_matches_source": true
+              },
+              "reason": "",
+              "semantic_correctness": "not verified"
+            }
+          ]
+        },
+        {
+          "text": "Module docstring: Configuration read from environment variables.",
+          "kind": "fact",
+          "evidence_ids": [
+            "E7"
+          ],
+          "status": "citation-valid",
+          "notes": [],
+          "citations": [
+            {
+              "citation": {
+                "revision": "nogit+c2db680b30",
+                "path": "inventory/config.py",
+                "start_line": 1,
+                "end_line": 14,
+                "symbol": "<module>",
+                "chunk_id": "4f0bbb807ad66f33"
+              },
+              "valid": true,
+              "checks": {
+                "path_in_repository": true,
+                "line_range_valid": true,
+                "revision_matches": true,
+                "chunk_matches_source": true
+              },
+              "reason": "",
+              "semantic_correctness": "not verified"
+            }
+          ]
+        },
+        {
+          "text": "Function `database_url`: `def database_url()`",
+          "kind": "fact",
+          "evidence_ids": [
+            "E8"
+          ],
+          "status": "citation-valid",
+          "notes": [],
+          "citations": [
+            {
+              "citation": {
+                "revision": "nogit+c2db680b30",
+                "path": "inventory/config.py",
+                "start_line": 5,
+                "end_line": 6,
+                "symbol": "inventory.config.database_url",
+                "chunk_id": "414dec70937485b4"
+              },
+              "valid": true,
+              "checks": {
+                "path_in_repository": true,
+                "line_range_valid": true,
+                "revision_matches": true,
+                "chunk_matches_source": true
+              },
+              "reason": "",
+              "semantic_correctness": "not verified"
+            }
+          ]
+        },
+        {
+          "text": "Function `api_port`: `def api_port()`",
+          "kind": "fact",
+          "evidence_ids": [
+            "E9"
+          ],
+          "status": "citation-valid",
+          "notes": [],
+          "citations": [
+            {
+              "citation": {
+                "revision": "nogit+c2db680b30",
+                "path": "inventory/config.py",
+                "start_line": 9,
+                "end_line": 10,
+                "symbol": "inventory.config.api_port",
+                "chunk_id": "0278e044d258ac88"
+              },
+              "valid": true,
+              "checks": {
+                "path_in_repository": true,
+                "line_range_valid": true,
+                "revision_matches": true,
+                "chunk_matches_source": true
+              },
+              "reason": "",
+              "semantic_correctness": "not verified"
+            }
+          ]
+        },
+        {
+          "text": "Function `smtp_host`: `def smtp_host()`",
+          "kind": "fact",
+          "evidence_ids": [
+            "E10"
+          ],
+          "status": "citation-valid",
+          "notes": [],
+          "citations": [
+            {
+              "citation": {
+                "revision": "nogit+c2db680b30",
+                "path": "inventory/config.py",
+                "start_line": 13,
+                "end_line": 14,
+                "symbol": "inventory.config.smtp_host",
+                "chunk_id": "a214c3b09bb0d6e3"
+              },
+              "valid": true,
+              "checks": {
+                "path_in_repository": true,
+                "line_range_valid": true,
+                "revision_matches": true,
+                "chunk_matches_source": true
+              },
+              "reason": "",
+              "semantic_correctness": "not verified"
+            }
+          ]
+        },
+        {
+          "text": "Module docstring: Data models.",
+          "kind": "fact",
+          "evidence_ids": [
+            "E11"
+          ],
+          "status": "citation-valid",
+          "notes": [],
+          "citations": [
+            {
+              "citation": {
+                "revision": "nogit+c2db680b30",
+                "path": "inventory/models.py",
+                "start_line": 1,
+                "end_line": 17,
+                "symbol": "<module>",
+                "chunk_id": "d2a3aa8b0192a65b"
+              },
+              "valid": true,
+              "checks": {
+                "path_in_repository": true,
+                "line_range_valid": true,
+                "revision_matches": true,
+                "chunk_matches_source": true
+              },
+              "reason": "",
+              "semantic_correctness": "not verified"
+            }
+          ]
+        },
+        {
+          "text": "Class `Base`: `class Base` - Minimal declarative base.",
+          "kind": "fact",
+          "evidence_ids": [
+            "E12"
+          ],
+          "status": "citation-valid",
+          "notes": [],
+          "citations": [
+            {
+              "citation": {
+                "revision": "nogit+c2db680b30",
+                "path": "inventory/models.py",
+                "start_line": 4,
+                "end_line": 5,
+                "symbol": "inventory.models.Base",
+                "chunk_id": "18bc982dac2766f0"
+              },
+              "valid": true,
+              "checks": {
+                "path_in_repository": true,
+                "line_range_valid": true,
+                "revision_matches": true,
+                "chunk_matches_source": true
+              },
+              "reason": "",
+              "semantic_correctness": "not verified"
+            }
+          ]
+        },
+        {
+          "text": "DatabaseEntity `Product`: `databaseentity Product` - A stocked product.",
+          "kind": "fact",
+          "evidence_ids": [
+            "E13"
+          ],
+          "status": "citation-valid",
+          "notes": [],
+          "citations": [
+            {
+              "citation": {
+                "revision": "nogit+c2db680b30",
+                "path": "inventory/models.py",
+                "start_line": 8,
+                "end_line": 17,
+                "symbol": "inventory.models.Product",
+                "chunk_id": "1d7f9f3c61649751"
+              },
+              "valid": true,
+              "checks": {
+                "path_in_repository": true,
+                "line_range_valid": true,
+                "revision_matches": true,
+                "chunk_matches_source": true
+              },
+              "reason": "",
+              "semantic_correctness": "not verified"
+            }
+          ]
+        },
+        {
+          "text": "Module docstring: Low-stock notifications.",
+          "kind": "fact",
+          "evidence_ids": [
+            "E14"
+          ],
+          "status": "citation-valid",
+          "notes": [],
+          "citations": [
+            {
+              "citation": {
+                "revision": "nogit+c2db680b30",
+                "path": "inventory/notifier.py",
+                "start_line": 1,
+                "end_line": 15,
+                "symbol": "<module>",
+                "chunk_id": "3dd3aabc7f4a5154"
+              },
+              "valid": true,
+              "checks": {
+                "path_in_repository": true,
+                "line_range_valid": true,
+                "revision_matches": true,
+                "chunk_matches_source": true
+              },
+              "reason": "",
+              "semantic_correctness": "not verified"
+            }
+          ]
+        },
+        {
+          "text": "Function `notify_low_stock`: `def notify_low_stock(sku: str, quantity: int)`",
+          "kind": "fact",
+          "evidence_ids": [
+            "E15"
+          ],
+          "status": "citation-valid",
+          "notes": [],
+          "citations": [
+            {
+              "citation": {
+                "revision": "nogit+c2db680b30",
+                "path": "inventory/notifier.py",
+                "start_line": 9,
+                "end_line": 15,
+                "symbol": "inventory.notifier.notify_low_stock",
+                "chunk_id": "18752e9fa7358510"
+              },
+              "valid": true,
+              "checks": {
+                "path_in_repository": true,
+                "line_range_valid": true,
+                "revision_matches": true,
+                "chunk_matches_source": true
+              },
+              "reason": "",
+              "semantic_correctness": "not verified"
+            }
+          ]
+        },
+        {
+          "text": "Module docstring: Stock management business logic.",
+          "kind": "fact",
+          "evidence_ids": [
+            "E16"
+          ],
+          "status": "citation-valid",
+          "notes": [],
+          "citations": [
+            {
+              "citation": {
+                "revision": "nogit+c2db680b30",
+                "path": "inventory/service.py",
+                "start_line": 1,
+                "end_line": 30,
+                "symbol": "<module>",
+                "chunk_id": "4e5dfc4657011427"
+              },
+              "valid": true,
+              "checks": {
+                "path_in_repository": true,
+                "line_range_valid": true,
+                "revision_matches": true,
+                "chunk_matches_source": true
+              },
+              "reason": "",
+              "semantic_correctness": "not verified"
+            }
+          ]
+        },
+        {
+          "text": "Function `add_stock`: `def add_stock(product: Product, amount: int)` - Increase the quantity of a product.",
+          "kind": "fact",
+          "evidence_ids": [
+            "E17"
+          ],
+          "status": "citation-valid",
+          "notes": [],
+          "citations": [
+            {
+              "citation": {
+                "revision": "nogit+c2db680b30",
+                "path": "inventory/service.py",
+                "start_line": 9,
+                "end_line": 14,
+                "symbol": "inventory.service.add_stock",
+                "chunk_id": "2a46bc7ed69f2c36"
+              },
+              "valid": true,
+              "checks": {
+                "path_in_repository": true,
+                "line_range_valid": true,
+                "revision_matches": true,
+                "chunk_matches_source": true
+              },
+              "reason": "",
+              "semantic_correctness": "not verified"
+            }
+          ]
+        },
+        {
+          "text": "Function `remove_stock`: `def remove_stock(product: Product, amount: int, history=[])`",
+          "kind": "fact",
+          "evidence_ids": [
+            "E18"
+          ],
+          "status": "citation-valid",
+          "notes": [],
+          "citations": [
+            {
+              "citation": {
+                "revision": "nogit+c2db680b30",
+                "path": "inventory/service.py",
+                "start_line": 17,
+                "end_line": 24,
+                "symbol": "inventory.service.remove_stock",
+                "chunk_id": "5502d30c8df441a5"
+              },
+              "valid": true,
+              "checks": {
+                "path_in_repository": true,
+                "line_range_valid": true,
+                "revision_matches": true,
+                "chunk_matches_source": true
+              },
+              "reason": "",
+              "semantic_correctness": "not verified"
+            }
+          ]
+        },
+        {
+          "text": "Function `apply_discount`: `def apply_discount(product: Product, percent: float)` - Return the discounted unit price.",
+          "kind": "fact",
+          "evidence_ids": [
+            "E19"
+          ],
+          "status": "citation-valid",
+          "notes": [],
+          "citations": [
+            {
+              "citation": {
+                "revision": "nogit+c2db680b30",
+                "path": "inventory/service.py",
+                "start_line": 27,
+                "end_line": 31,
+                "symbol": "inventory.service.apply_discount",
+                "chunk_id": "2afc16d16e7c8470"
+              },
+              "valid": true,
+              "checks": {
+                "path_in_repository": true,
+                "line_range_valid": true,
+                "revision_matches": true,
+                "chunk_matches_source": true
+              },
+              "reason": "",
+              "semantic_correctness": "not verified"
+            }
+          ]
+        },
+        {
+          "text": "Function `stock_report`: `def stock_report(products: list)`",
+          "kind": "fact",
+          "evidence_ids": [
+            "E20"
+          ],
+          "status": "citation-valid",
+          "notes": [],
+          "citations": [
+            {
+              "citation": {
+                "revision": "nogit+c2db680b30",
+                "path": "inventory/service.py",
+                "start_line": 34,
+                "end_line": 36,
+                "symbol": "inventory.service.stock_report",
+                "chunk_id": "4ed3d0d2be2349b5"
+              },
+              "valid": true,
+              "checks": {
+                "path_in_repository": true,
+                "line_range_valid": true,
+                "revision_matches": true,
+                "chunk_matches_source": true
+              },
+              "reason": "",
+              "semantic_correctness": "not verified"
+            }
+          ]
+        },
+        {
+          "text": "Module docstring: Helper functions.",
+          "kind": "fact",
+          "evidence_ids": [
+            "E21"
+          ],
+          "status": "citation-valid",
+          "notes": [],
+          "citations": [
+            {
+              "citation": {
+                "revision": "nogit+c2db680b30",
+                "path": "inventory/utils.py",
+                "start_line": 1,
+                "end_line": 17,
+                "symbol": "<module>",
+                "chunk_id": "2289d52d6d2bde58"
+              },
+              "valid": true,
+              "checks": {
+                "path_in_repository": true,
+                "line_range_valid": true,
+                "revision_matches": true,
+                "chunk_matches_source": true
+              },
+              "reason": "",
+              "semantic_correctness": "not verified"
+            }
+          ]
+        },
+        {
+          "text": "Function `parse_sku`: `def parse_sku(raw: str)` - Normalise a SKU string.",
+          "kind": "fact",
+          "evidence_ids": [
+            "E22"
+          ],
+          "status": "citation-valid",
+          "notes": [],
+          "citations": [
+            {
+              "citation": {
+                "revision": "nogit+c2db680b30",
+                "path": "inventory/utils.py",
+                "start_line": 5,
+                "end_line": 9,
+                "symbol": "inventory.utils.parse_sku",
+                "chunk_id": "24babd70281797ae"
+              },
+              "valid": true,
+              "checks": {
+                "path_in_repository": true,
+                "line_range_valid": true,
+                "revision_matches": true,
+                "chunk_matches_source": true
+              },
+              "reason": "",
+              "semantic_correctness": "not verified"
+            }
+          ]
+        },
+        {
+          "text": "Function `run_command`: `def run_command(cmd: str)`",
+          "kind": "fact",
+          "evidence_ids": [
+            "E23"
+          ],
+          "status": "citation-valid",
+          "notes": [],
+          "citations": [
+            {
+              "citation": {
+                "revision": "nogit+c2db680b30",
+                "path": "inventory/utils.py",
+                "start_line": 12,
+                "end_line": 13,
+                "symbol": "inventory.utils.run_command",
+                "chunk_id": "648f213d81710d24"
+              },
+              "valid": true,
+              "checks": {
+                "path_in_repository": true,
+                "line_range_valid": true,
+                "revision_matches": true,
+                "chunk_matches_source": true
+              },
+              "reason": "",
+              "semantic_correctness": "not verified"
+            }
+          ]
+        },
+        {
+          "text": "Function `legacy_calc`: `def legacy_calc(expression: str)`",
+          "kind": "fact",
+          "evidence_ids": [
+            "E24"
+          ],
+          "status": "citation-valid",
+          "notes": [],
+          "citations": [
+            {
+              "citation": {
+                "revision": "nogit+c2db680b30",
+                "path": "inventory/utils.py",
+                "start_line": 16,
+                "end_line": 17,
+                "symbol": "inventory.utils.legacy_calc",
+                "chunk_id": "850c3fefcf405dee"
+              },
+              "valid": true,
+              "checks": {
+                "path_in_repository": true,
+                "line_range_valid": true,
+                "revision_matches": true,
+                "chunk_matches_source": true
+              },
+              "reason": "",
+              "semantic_correctness": "not verified"
+            }
+          ]
+        },
+        {
+          "text": "Module docstring: Entry point of the inventory service.",
+          "kind": "fact",
+          "evidence_ids": [
+            "E25"
+          ],
+          "status": "citation-valid",
+          "notes": [],
+          "citations": [
+            {
+              "citation": {
+                "revision": "nogit+c2db680b30",
+                "path": "main.py",
+                "start_line": 1,
+                "end_line": 11,
+                "symbol": "<module>",
+                "chunk_id": "7ac5151628a9fa0e"
+              },
+              "valid": true,
+              "checks": {
+                "path_in_repository": true,
+                "line_range_valid": true,
+                "revision_matches": true,
+                "chunk_matches_source": true
+              },
+              "reason": "",
+              "semantic_correctness": "not verified"
+            }
+          ]
+        },
+        {
+          "text": "Function `main`: `def main()`",
+          "kind": "fact",
+          "evidence_ids": [
+            "E26"
+          ],
+          "status": "citation-valid",
+          "notes": [],
+          "citations": [
+            {
+              "citation": {
+                "revision": "nogit+c2db680b30",
+                "path": "main.py",
+                "start_line": 6,
+                "end_line": 7,
+                "symbol": "main.main",
+                "chunk_id": "959918d3fe486ccc"
+              },
+              "valid": true,
+              "checks": {
+                "path_in_repository": true,
+                "line_range_valid": true,
+                "revision_matches": true,
+                "chunk_matches_source": true
+              },
+              "reason": "",
+              "semantic_correctness": "not verified"
+            }
+          ]
+        },
+        {
+          "text": "`GET /stock` handled by `inventory.api.get_stock` (framework not verified)",
+          "kind": "fact",
+          "evidence_ids": [
+            "E4"
+          ],
+          "status": "citation-valid",
+          "notes": [],
+          "citations": [
+            {
+              "citation": {
+                "revision": "nogit+c2db680b30",
+                "path": "inventory/api.py",
+                "start_line": 9,
+                "end_line": 11,
+                "symbol": "inventory.api.get_stock",
+                "chunk_id": "12c74d121955e226"
+              },
+              "valid": true,
+              "checks": {
+                "path_in_repository": true,
+                "line_range_valid": true,
+                "revision_matches": true,
+                "chunk_matches_source": true
+              },
+              "reason": "",
+              "semantic_correctness": "not verified"
+            }
+          ]
+        },
+        {
+          "text": "`POST /stock/{sku}/add` handled by `inventory.api.post_add` (framework not verified)",
+          "kind": "fact",
+          "evidence_ids": [
+            "E5"
+          ],
+          "status": "citation-valid",
+          "notes": [],
+          "citations": [
+            {
+              "citation": {
+                "revision": "nogit+c2db680b30",
+                "path": "inventory/api.py",
+                "start_line": 14,
+                "end_line": 16,
+                "symbol": "inventory.api.post_add",
+                "chunk_id": "35cc2f85e344389a"
+              },
+              "valid": true,
+              "checks": {
+                "path_in_repository": true,
+                "line_range_valid": true,
+                "revision_matches": true,
+                "chunk_matches_source": true
+              },
+              "reason": "",
+              "semantic_correctness": "not verified"
+            }
+          ]
+        },
+        {
+          "text": "`GET /price/{sku}` handled by `inventory.api.get_price` (framework not verified)",
+          "kind": "fact",
+          "evidence_ids": [
+            "E6"
+          ],
+          "status": "citation-valid",
+          "notes": [],
+          "citations": [
+            {
+              "citation": {
+                "revision": "nogit+c2db680b30",
+                "path": "inventory/api.py",
+                "start_line": 19,
+                "end_line": 21,
+                "symbol": "inventory.api.get_price",
+                "chunk_id": "9fc9fd947cecab75"
+              },
+              "valid": true,
+              "checks": {
+                "path_in_repository": true,
+                "line_range_valid": true,
+                "revision_matches": true,
+                "chunk_matches_source": true
+              },
+              "reason": "",
+              "semantic_correctness": "not verified"
+            }
+          ]
+        },
+        {
+          "text": "Environment variable `API_PORT` read in `inventory.config.api_port`; declared in `.env.example`",
+          "kind": "fact",
+          "evidence_ids": [
+            "E27"
+          ],
+          "status": "citation-valid",
+          "notes": [],
+          "citations": [
+            {
+              "citation": {
+                "revision": "nogit+c2db680b30",
+                "path": "inventory/config.py",
+                "start_line": 10,
+                "end_line": 10,
+                "symbol": "inventory.config.api_port",
+                "chunk_id": "0278e044d258ac88"
+              },
+              "valid": true,
+              "checks": {
+                "path_in_repository": true,
+                "line_range_valid": true,
+                "revision_matches": true,
+                "chunk_matches_source": true
+              },
+              "reason": "",
+              "semantic_correctness": "not verified"
+            }
+          ]
+        },
+        {
+          "text": "Environment variable `DATABASE_URL` read in `inventory.config.database_url`; declared in `.env.example`",
+          "kind": "fact",
+          "evidence_ids": [
+            "E28"
+          ],
+          "status": "citation-valid",
+          "notes": [],
+          "citations": [
+            {
+              "citation": {
+                "revision": "nogit+c2db680b30",
+                "path": "inventory/config.py",
+                "start_line": 6,
+                "end_line": 6,
+                "symbol": "inventory.config.database_url",
+                "chunk_id": "414dec70937485b4"
+              },
+              "valid": true,
+              "checks": {
+                "path_in_repository": true,
+                "line_range_valid": true,
+                "revision_matches": true,
+                "chunk_matches_source": true
+              },
+              "reason": "",
+              "semantic_correctness": "not verified"
+            }
+          ]
+        },
+        {
+          "text": "Environment variable `SMTP_HOST` read in `inventory.config.smtp_host`; declared in `.env.example`",
+          "kind": "fact",
+          "evidence_ids": [
+            "E29"
+          ],
+          "status": "citation-valid",
+          "notes": [],
+          "citations": [
+            {
+              "citation": {
+                "revision": "nogit+c2db680b30",
+                "path": "inventory/config.py",
+                "start_line": 14,
+                "end_line": 14,
+                "symbol": "inventory.config.smtp_host",
+                "chunk_id": "a214c3b09bb0d6e3"
+              },
+              "valid": true,
+              "checks": {
+                "path_in_repository": true,
+                "line_range_valid": true,
+                "revision_matches": true,
+                "chunk_matches_source": true
+              },
+              "reason": "",
+              "semantic_correctness": "not verified"
+            }
+          ]
+        },
+        {
+          "text": "Imports external module `os` (1 import statement(s))",
+          "kind": "fact",
+          "evidence_ids": [
+            "E30"
+          ],
+          "status": "citation-valid",
+          "notes": [],
+          "citations": [
+            {
+              "citation": {
+                "revision": "nogit+c2db680b30",
+                "path": "inventory/config.py",
+                "start_line": 2,
+                "end_line": 2,
+                "symbol": "<module>",
+                "chunk_id": "4f0bbb807ad66f33"
+              },
+              "valid": true,
+              "checks": {
+                "path_in_repository": true,
+                "line_range_valid": true,
+                "revision_matches": true,
+                "chunk_matches_source": true
+              },
+              "reason": "",
+              "semantic_correctness": "not verified"
+            }
+          ]
+        },
+        {
+          "text": "Imports external module `requests` (1 import statement(s))",
+          "kind": "fact",
+          "evidence_ids": [
+            "E31"
+          ],
+          "status": "citation-valid",
+          "notes": [],
+          "citations": [
+            {
+              "citation": {
+                "revision": "nogit+c2db680b30",
+                "path": "inventory/notifier.py",
+                "start_line": 2,
+                "end_line": 2,
+                "symbol": "<module>",
+                "chunk_id": "3dd3aabc7f4a5154"
+              },
+              "valid": true,
+              "checks": {
+                "path_in_repository": true,
+                "line_range_valid": true,
+                "revision_matches": true,
+                "chunk_matches_source": true
+              },
+              "reason": "",
+              "semantic_correctness": "not verified"
+            }
+          ]
+        },
+        {
+          "text": "Imports external module `subprocess` (1 import statement(s))",
+          "kind": "fact",
+          "evidence_ids": [
+            "E32"
+          ],
+          "status": "citation-valid",
+          "notes": [],
+          "citations": [
+            {
+              "citation": {
+                "revision": "nogit+c2db680b30",
+                "path": "inventory/utils.py",
+                "start_line": 2,
+                "end_line": 2,
+                "symbol": "<module>",
+                "chunk_id": "2289d52d6d2bde58"
+              },
+              "valid": true,
+              "checks": {
+                "path_in_repository": true,
+                "line_range_valid": true,
+                "revision_matches": true,
+                "chunk_matches_source": true
+              },
+              "reason": "",
+              "semantic_correctness": "not verified"
+            }
+          ]
+        },
+        {
+          "text": "Imports external module `pytest` (1 import statement(s))",
+          "kind": "fact",
+          "evidence_ids": [
+            "E33"
+          ],
+          "status": "citation-valid",
+          "notes": [],
+          "citations": [
+            {
+              "citation": {
+                "revision": "nogit+c2db680b30",
+                "path": "tests/test_service.py",
+                "start_line": 1,
+                "end_line": 1,
+                "symbol": "<module>",
+                "chunk_id": "cfa8e4e67ab25ff0"
+              },
+              "valid": true,
+              "checks": {
+                "path_in_repository": true,
+                "line_range_valid": true,
+                "revision_matches": true,
+                "chunk_matches_source": true
+              },
+              "reason": "",
+              "semantic_correctness": "not verified"
+            }
+          ]
+        },
+        {
+          "text": "Dependency manifest `requirements.txt` is present",
+          "kind": "fact",
+          "evidence_ids": [
+            "E34"
+          ],
+          "status": "citation-valid",
+          "notes": [],
+          "citations": [
+            {
+              "citation": {
+                "revision": "nogit+c2db680b30",
+                "path": "requirements.txt",
+                "start_line": 1,
+                "end_line": 1,
+                "symbol": "<preamble>",
+                "chunk_id": "cca2b370b8ce0d81"
+              },
+              "valid": true,
+              "checks": {
+                "path_in_repository": true,
+                "line_range_valid": true,
+                "revision_matches": true,
+                "chunk_matches_source": true
+              },
+              "reason": "",
+              "semantic_correctness": "not verified"
+            }
+          ]
+        },
+        {
+          "text": "README section 'Install' describes setup/usage",
+          "kind": "fact",
+          "evidence_ids": [
+            "E35"
+          ],
+          "status": "citation-valid",
+          "notes": [],
+          "citations": [
+            {
+              "citation": {
+                "revision": "nogit+c2db680b30",
+                "path": "README.md",
+                "start_line": 5,
+                "end_line": 7,
+                "symbol": "Install",
+                "chunk_id": "0b3e84b256d20439"
+              },
+              "valid": true,
+              "checks": {
+                "path_in_repository": true,
+                "line_range_valid": true,
+                "revision_matches": true,
+                "chunk_matches_source": true
+              },
+              "reason": "",
+              "semantic_correctness": "not verified"
+            }
+          ]
+        },
+        {
+          "text": "README section 'Usage' describes setup/usage",
+          "kind": "fact",
+          "evidence_ids": [
+            "E36"
+          ],
+          "status": "citation-valid",
+          "notes": [],
+          "citations": [
+            {
+              "citation": {
+                "revision": "nogit+c2db680b30",
+                "path": "README.md",
+                "start_line": 8,
+                "end_line": 9,
+                "symbol": "Usage",
+                "chunk_id": "b7775b031bea638e"
+              },
+              "valid": true,
+              "checks": {
+                "path_in_repository": true,
+                "line_range_valid": true,
+                "revision_matches": true,
+                "chunk_matches_source": true
+              },
+              "reason": "",
+              "semantic_correctness": "not verified"
+            }
+          ]
+        },
+        {
+          "text": "`Dockerfile` is present and can be reviewed for build/run steps",
+          "kind": "fact",
+          "evidence_ids": [
+            "E37"
+          ],
+          "status": "citation-valid",
+          "notes": [],
+          "citations": [
+            {
+              "citation": {
+                "revision": "nogit+c2db680b30",
+                "path": "Dockerfile",
+                "start_line": 1,
+                "end_line": 4,
+                "symbol": "FROM python:3.11-slim",
+                "chunk_id": "b3a2e537449e9725"
+              },
+              "valid": true,
+              "checks": {
+                "path_in_repository": true,
+                "line_range_valid": true,
+                "revision_matches": true,
+                "chunk_matches_source": true
+              },
+              "reason": "",
+              "semantic_correctness": "not verified"
+            }
+          ]
+        },
+        {
+          "text": "4 test function(s) were detected.",
+          "kind": "fact",
+          "evidence_ids": [
+            "E38"
+          ],
+          "status": "citation-valid",
+          "notes": [],
+          "citations": [
+            {
+              "citation": {
+                "revision": "nogit+c2db680b30",
+                "path": "tests/test_service.py",
+                "start_line": 7,
+                "end_line": 9,
+                "symbol": "tests.test_service.test_add_stock",
+                "chunk_id": "39ffea781c5277de"
+              },
+              "valid": true,
+              "checks": {
+                "path_in_repository": true,
+                "line_range_valid": true,
+                "revision_matches": true,
+                "chunk_matches_source": true
+              },
+              "reason": "",
+              "semantic_correctness": "not verified"
+            }
+          ]
+        },
+        {
+          "text": "Add a module docstring to `.env.example`.",
+          "kind": "recommendation",
+          "evidence_ids": [],
+          "status": "uncited-recommendation",
+          "notes": [],
+          "citations": []
+        },
+        {
+          "text": "Add a module docstring to `Dockerfile`.",
+          "kind": "recommendation",
+          "evidence_ids": [],
+          "status": "uncited-recommendation",
+          "notes": [],
+          "citations": []
+        },
+        {
+          "text": "Add a module docstring to `README.md`.",
+          "kind": "recommendation",
+          "evidence_ids": [],
+          "status": "uncited-recommendation",
+          "notes": [],
+          "citations": []
+        },
+        {
+          "text": "Add a module docstring to `docs/overview.md`.",
+          "kind": "recommendation",
+          "evidence_ids": [],
+          "status": "uncited-recommendation",
+          "notes": [],
+          "citations": []
+        },
+        {
+          "text": "Document public function `inventory.api.get_stock` (inventory/api.py:9).",
+          "kind": "recommendation",
+          "evidence_ids": [],
+          "status": "uncited-recommendation",
+          "notes": [],
+          "citations": []
+        },
+        {
+          "text": "Document public function `inventory.api.post_add` (inventory/api.py:14).",
+          "kind": "recommendation",
+          "evidence_ids": [],
+          "status": "uncited-recommendation",
+          "notes": [],
+          "citations": []
+        },
+        {
+          "text": "Document public function `inventory.api.get_price` (inventory/api.py:19).",
+          "kind": "recommendation",
+          "evidence_ids": [],
+          "status": "uncited-recommendation",
+          "notes": [],
+          "citations": []
+        },
+        {
+          "text": "Document public function `inventory.config.database_url` (inventory/config.py:5).",
+          "kind": "recommendation",
+          "evidence_ids": [],
+          "status": "uncited-recommendation",
+          "notes": [],
+          "citations": []
+        },
+        {
+          "text": "Document public function `inventory.config.api_port` (inventory/config.py:9).",
+          "kind": "recommendation",
+          "evidence_ids": [],
+          "status": "uncited-recommendation",
+          "notes": [],
+          "citations": []
+        },
+        {
+          "text": "Document public function `inventory.config.smtp_host` (inventory/config.py:13).",
+          "kind": "recommendation",
+          "evidence_ids": [],
+          "status": "uncited-recommendation",
+          "notes": [],
+          "citations": []
+        },
+        {
+          "text": "Document public function `inventory.notifier.notify_low_stock` (inventory/notifier.py:9).",
+          "kind": "recommendation",
+          "evidence_ids": [],
+          "status": "uncited-recommendation",
+          "notes": [],
+          "citations": []
+        },
+        {
+          "text": "Document public function `inventory.service.remove_stock` (inventory/service.py:17).",
+          "kind": "recommendation",
+          "evidence_ids": [],
+          "status": "uncited-recommendation",
+          "notes": [],
+          "citations": []
+        },
+        {
+          "text": "Document public function `inventory.service.stock_report` (inventory/service.py:34).",
+          "kind": "recommendation",
+          "evidence_ids": [],
+          "status": "uncited-recommendation",
+          "notes": [],
+          "citations": []
+        },
+        {
+          "text": "Document public function `inventory.utils.run_command` (inventory/utils.py:12).",
+          "kind": "recommendation",
+          "evidence_ids": [],
+          "status": "uncited-recommendation",
+          "notes": [],
+          "citations": []
+        },
+        {
+          "text": "Document public function `inventory.utils.legacy_calc` (inventory/utils.py:16).",
+          "kind": "recommendation",
+          "evidence_ids": [],
+          "status": "uncited-recommendation",
+          "notes": [],
+          "citations": []
+        },
+        {
+          "text": "Document public function `main.main` (main.py:6).",
+          "kind": "recommendation",
+          "evidence_ids": [],
+          "status": "uncited-recommendation",
+          "notes": [],
+          "citations": []
+        },
+        {
+          "text": "Add a module docstring to `requirements.txt`.",
+          "kind": "recommendation",
+          "evidence_ids": [],
+          "status": "uncited-recommendation",
+          "notes": [],
+          "citations": []
+        },
+        {
+          "text": "Add a module docstring to `tests/test_service.py`.",
+          "kind": "recommendation",
+          "evidence_ids": [],
+          "status": "uncited-recommendation",
+          "notes": [],
+          "citations": []
+        },
+        {
+          "text": "Add a module docstring to `tests/test_utils.py`.",
+          "kind": "recommendation",
+          "evidence_ids": [],
+          "status": "uncited-recommendation",
+          "notes": [],
+          "citations": []
+        },
+        {
+          "text": "No test is statically linked to `inventory.api.get_stock` (inventory/api.py:9).",
+          "kind": "recommendation",
+          "evidence_ids": [],
+          "status": "uncited-recommendation",
+          "notes": [],
+          "citations": []
+        },
+        {
+          "text": "No test is statically linked to `inventory.api.post_add` (inventory/api.py:14).",
+          "kind": "recommendation",
+          "evidence_ids": [],
+          "status": "uncited-recommendation",
+          "notes": [],
+          "citations": []
+        },
+        {
+          "text": "No test is statically linked to `inventory.api.get_price` (inventory/api.py:19).",
+          "kind": "recommendation",
+          "evidence_ids": [],
+          "status": "uncited-recommendation",
+          "notes": [],
+          "citations": []
+        },
+        {
+          "text": "No test is statically linked to `inventory.config.database_url` (inventory/config.py:5).",
+          "kind": "recommendation",
+          "evidence_ids": [],
+          "status": "uncited-recommendation",
+          "notes": [],
+          "citations": []
+        },
+        {
+          "text": "No test is statically linked to `inventory.config.api_port` (inventory/config.py:9).",
+          "kind": "recommendation",
+          "evidence_ids": [],
+          "status": "uncited-recommendation",
+          "notes": [],
+          "citations": []
+        },
+        {
+          "text": "No test is statically linked to `inventory.config.smtp_host` (inventory/config.py:13).",
+          "kind": "recommendation",
+          "evidence_ids": [],
+          "status": "uncited-recommendation",
+          "notes": [],
+          "citations": []
+        },
+        {
+          "text": "No test is statically linked to `inventory.models.Product.total_value` (inventory/models.py:16).",
+          "kind": "recommendation",
+          "evidence_ids": [],
+          "status": "uncited-recommendation",
+          "notes": [],
+          "citations": []
+        },
+        {
+          "text": "No test is statically linked to `inventory.notifier.notify_low_stock` (inventory/notifier.py:9).",
+          "kind": "recommendation",
+          "evidence_ids": [],
+          "status": "uncited-recommendation",
+          "notes": [],
+          "citations": []
+        },
+        {
+          "text": "No test is statically linked to `inventory.service.remove_stock` (inventory/service.py:17).",
+          "kind": "recommendation",
+          "evidence_ids": [],
+          "status": "uncited-recommendation",
+          "notes": [],
+          "citations": []
+        },
+        {
+          "text": "No test is statically linked to `inventory.service.stock_report` (inventory/service.py:34).",
+          "kind": "recommendation",
+          "evidence_ids": [],
+          "status": "uncited-recommendation",
+          "notes": [],
+          "citations": []
+        },
+        {
+          "text": "No test is statically linked to `inventory.utils.run_command` (inventory/utils.py:12).",
+          "kind": "recommendation",
+          "evidence_ids": [],
+          "status": "uncited-recommendation",
+          "notes": [],
+          "citations": []
+        },
+        {
+          "text": "No test is statically linked to `inventory.utils.legacy_calc` (inventory/utils.py:16).",
+          "kind": "recommendation",
+          "evidence_ids": [],
+          "status": "uncited-recommendation",
+          "notes": [],
+          "citations": []
+        },
+        {
+          "text": "No test is statically linked to `main.main` (main.py:6).",
+          "kind": "recommendation",
+          "evidence_ids": [],
+          "status": "uncited-recommendation",
+          "notes": [],
+          "citations": []
+        }
+      ],
+      "payload": {
+        "markdown": "# sample_repo - generated documentation\n_Revision `nogit+c2db680b30`. Generated by CodeMind OS from static analysis. Statements in **Verified repository facts** carry file:line references; **Suggested improvements** are recommendations, not facts._\n\n## Architecture overview\n### Verified repository facts\n- `main.py` is an executable entry point (`__main__` guard) (`main.py:10-11`)\n- Files per top-level location: `(root)` (5), `docs` (1), `inventory` (7), `tests` (2) (from the file manifest)\n\n## Module reference\n### Verified repository facts\n#### `.env.example`\n#### `Dockerfile`\n#### `README.md`\n#### `docs/overview.md`\n#### `inventory/__init__.py`\n- Module docstring: Inventory package. (`inventory/__init__.py:1-1`)\n#### `inventory/api.py`\n- Module docstring: HTTP routes. (`inventory/api.py:1-21`)\n- Function `get_stock`: `def get_stock()` (`inventory/api.py:9-11`)\n- Function `post_add`: `def post_add(sku: str, amount: int)` (`inventory/api.py:14-16`)\n- Function `get_price`: `def get_price(sku: str, discount: float=0)` (`inventory/api.py:19-21`)\n#### `inventory/config.py`\n- Module docstring: Configuration read from environment variables. (`inventory/config.py:1-14`)\n- Function `database_url`: `def database_url()` (`inventory/config.py:5-6`)\n- Function `api_port`: `def api_port()` (`inventory/config.py:9-10`)\n- Function `smtp_host`: `def smtp_host()` (`inventory/config.py:13-14`)\n#### `inventory/models.py`\n- Module docstring: Data models. (`inventory/models.py:1-17`)\n- Class `Base`: `class Base` - Minimal declarative base. (`inventory/models.py:4-5`)\n- DatabaseEntity `Product`: `databaseentity Product` - A stocked product. (`inventory/models.py:8-17`)\n#### `inventory/notifier.py`\n- Module docstring: Low-stock notifications. (`inventory/notifier.py:1-15`)\n- Function `notify_low_stock`: `def notify_low_stock(sku: str, quantity: int)` (`inventory/notifier.py:9-15`)\n#### `inventory/service.py`\n- Module docstring: Stock management business logic. (`inventory/service.py:1-30`)\n- Function `add_stock`: `def add_stock(product: Product, amount: int)` - Increase the quantity of a product. (`inventory/service.py:9-14`)\n- Function `remove_stock`: `def remove_stock(product: Product, amount: int, history=[])` (`inventory/service.py:17-24`)\n- Function `apply_discount`: `def apply_discount(product: Product, percent: float)` - Return the discounted unit price. (`inventory/service.py:27-31`)\n- Function `stock_report`: `def stock_report(products: list)` (`inventory/service.py:34-36`)\n#### `inventory/utils.py`\n- Module docstring: Helper functions. (`inventory/utils.py:1-17`)\n- Function `parse_sku`: `def parse_sku(raw: str)` - Normalise a SKU string. (`inventory/utils.py:5-9`)\n- Function `run_command`: `def run_command(cmd: str)` (`inventory/utils.py:12-13`)\n- Function `legacy_calc`: `def legacy_calc(expression: str)` (`inventory/utils.py:16-17`)\n#### `main.py`\n- Module docstring: Entry point of the inventory service. (`main.py:1-11`)\n- Function `main`: `def main()` (`main.py:6-7`)\n#### `requirements.txt`\n#### `tests/test_service.py`\n#### `tests/test_utils.py`\n\n## API summary\n### Verified repository facts\n- `GET /stock` handled by `inventory.api.get_stock` (framework not verified) (`inventory/api.py:9-11`)\n- `POST /stock/{sku}/add` handled by `inventory.api.post_add` (framework not verified) (`inventory/api.py:14-16`)\n- `GET /price/{sku}` handled by `inventory.api.get_price` (framework not verified) (`inventory/api.py:19-21`)\n\n## Configuration reference\n### Verified repository facts\n- Environment variable `API_PORT` read in `inventory.config.api_port`; declared in `.env.example` (`inventory/config.py:10-10`)\n- Environment variable `DATABASE_URL` read in `inventory.config.database_url`; declared in `.env.example` (`inventory/config.py:6-6`)\n- Environment variable `SMTP_HOST` read in `inventory.config.smtp_host`; declared in `.env.example` (`inventory/config.py:14-14`)\n\n## Dependencies\n### Verified repository facts\n- Imports external module `os` (1 import statement(s)) (`inventory/config.py:2-2`)\n- Imports external module `requests` (1 import statement(s)) (`inventory/notifier.py:2-2`)\n- Imports external module `subprocess` (1 import statement(s)) (`inventory/utils.py:2-2`)\n- Imports external module `pytest` (1 import statement(s)) (`tests/test_service.py:1-1`)\n- Dependency manifest `requirements.txt` is present (`requirements.txt:1-1`)\n\n## Setup instructions\n### Verified repository facts\n- README section 'Install' describes setup/usage (`README.md:5-7`)\n- README section 'Usage' describes setup/usage (`README.md:8-9`)\n- `Dockerfile` is present and can be reviewed for build/run steps (`Dockerfile:1-4`)\n\n## Developer guide (proposed)\n### Verified repository facts\n- 4 test function(s) were detected; first at `tests/test_service.py:7-9`\n\n## Suggested improvements (recommendations, not facts)\n- Add a module docstring to `.env.example`.\n- Add a module docstring to `Dockerfile`.\n- Add a module docstring to `README.md`.\n- Add a module docstring to `docs/overview.md`.\n- Document public function `inventory.api.get_stock` (inventory/api.py:9).\n- Document public function `inventory.api.post_add` (inventory/api.py:14).\n- Document public function `inventory.api.get_price` (inventory/api.py:19).\n- Document public function `inventory.config.database_url` (inventory/config.py:5).\n- Document public function `inventory.config.api_port` (inventory/config.py:9).\n- Document public function `inventory.config.smtp_host` (inventory/config.py:13).\n- Document public function `inventory.notifier.notify_low_stock` (inventory/notifier.py:9).\n- Document public function `inventory.service.remove_stock` (inventory/service.py:17).\n- Document public function `inventory.service.stock_report` (inventory/service.py:34).\n- Document public function `inventory.utils.run_command` (inventory/utils.py:12).\n- Document public function `inventory.utils.legacy_calc` (inventory/utils.py:16).\n- Document public function `main.main` (main.py:6).\n- Add a module docstring to `requirements.txt`.\n- Add a module docstring to `tests/test_service.py`.\n- Add a module docstring to `tests/test_utils.py`.\n- No test is statically linked to `inventory.api.get_stock` (inventory/api.py:9).\n- No test is statically linked to `inventory.api.post_add` (inventory/api.py:14).\n- No test is statically linked to `inventory.api.get_price` (inventory/api.py:19).\n- No test is statically linked to `inventory.config.database_url` (inventory/config.py:5).\n- No test is statically linked to `inventory.config.api_port` (inventory/config.py:9).\n- No test is statically linked to `inventory.config.smtp_host` (inventory/config.py:13).\n- No test is statically linked to `inventory.models.Product.total_value` (inventory/models.py:16).\n- No test is statically linked to `inventory.notifier.notify_low_stock` (inventory/notifier.py:9).\n- No test is statically linked to `inventory.service.remove_stock` (inventory/service.py:17).\n- No test is statically linked to `inventory.service.stock_report` (inventory/service.py:34).\n- No test is statically linked to `inventory.utils.run_command` (inventory/utils.py:12).\n- No test is statically linked to `inventory.utils.legacy_calc` (inventory/utils.py:16).\n- No test is statically linked to `main.main` (main.py:6).\n",
+        "kind": "full"
+      }
+    }
+  ],
+  "evidence": [
+    {
+      "id": "E1",
+      "revision": "nogit+c2db680b30",
+      "path": "main.py",
+      "start_line": 10,
+      "end_line": 11,
+      "symbol": "<module>",
+      "chunk_id": "da24270c482a414e",
+      "language": "python",
+      "methods": [
+        "graph",
+        "doc-generator"
+      ],
+      "scores": {},
+      "final_score": 0.0,
+      "entity_ids": [
+        "e_ad86806d138ef2c7"
+      ],
+      "uncertainty": [],
+      "text": "if __name__ == \"__main__\":\n    main()"
+    },
+    {
+      "id": "E2",
+      "revision": "nogit+c2db680b30",
+      "path": "inventory/__init__.py",
+      "start_line": 1,
+      "end_line": 1,
+      "symbol": "<module>",
+      "chunk_id": "d0cd4e0726cb395b",
+      "language": "python",
+      "methods": [
+        "graph",
+        "doc-generator"
+      ],
+      "scores": {},
+      "final_score": 0.0,
+      "entity_ids": [
+        "e_bbf57a38f8856f1e"
+      ],
+      "uncertainty": [],
+      "text": "\"\"\"Inventory package.\"\"\""
+    },
+    {
+      "id": "E3",
+      "revision": "nogit+c2db680b30",
+      "path": "inventory/api.py",
+      "start_line": 1,
+      "end_line": 21,
+      "symbol": "<module>",
+      "chunk_id": "8da780cea6e1ae39",
+      "language": "python",
+      "methods": [
+        "graph",
+        "doc-generator"
+      ],
+      "scores": {},
+      "final_score": 0.0,
+      "entity_ids": [
+        "e_2cad1debd53fb74d"
+      ],
+      "uncertainty": [],
+      "text": "\"\"\"HTTP routes.\"\"\"\nfrom inventory.models import Product\nfrom inventory.service import add_stock, apply_discount, stock_report\n\napp = None  # framework application object is created elsewhere\nPRODUCTS = [Product(\"A-1\", 10, 2.5)]\n\n\n@app.get(\"/stock\")\ndef get_stock():\n    return stock_report(PRODUCTS)\n\n\n@app.post(\"/stock/{sku}/add\")\ndef post_add(sku: str, amount: int):\n    return add_stock(PRODUCTS[0], amount).quantity\n\n\n@app.get(\"/price/{sku}\")\ndef get_price(sku: str, discount: float = 0):\n    return apply_discount(PRODUCTS[0], discount)"
+    },
+    {
+      "id": "E4",
+      "revision": "nogit+c2db680b30",
+      "path": "inventory/api.py",
+      "start_line": 9,
+      "end_line": 11,
+      "symbol": "inventory.api.get_stock",
+      "chunk_id": "12c74d121955e226",
+      "language": "python",
+      "methods": [
+        "doc-generator",
+        "graph"
+      ],
+      "scores": {},
+      "final_score": 0.0,
+      "entity_ids": [
+        "e_fea18ad42363c31c",
+        "e_60fbb328b83c95c7"
+      ],
+      "uncertainty": [],
+      "text": "@app.get(\"/stock\")\ndef get_stock():\n    return stock_report(PRODUCTS)"
+    },
+    {
+      "id": "E5",
+      "revision": "nogit+c2db680b30",
+      "path": "inventory/api.py",
+      "start_line": 14,
+      "end_line": 16,
+      "symbol": "inventory.api.post_add",
+      "chunk_id": "35cc2f85e344389a",
+      "language": "python",
+      "methods": [
+        "doc-generator",
+        "graph"
+      ],
+      "scores": {},
+      "final_score": 0.0,
+      "entity_ids": [
+        "e_d25001dad521a7ee",
+        "e_3f685b2d848919cf"
+      ],
+      "uncertainty": [],
+      "text": "@app.post(\"/stock/{sku}/add\")\ndef post_add(sku: str, amount: int):\n    return add_stock(PRODUCTS[0], amount).quantity"
+    },
+    {
+      "id": "E6",
+      "revision": "nogit+c2db680b30",
+      "path": "inventory/api.py",
+      "start_line": 19,
+      "end_line": 21,
+      "symbol": "inventory.api.get_price",
+      "chunk_id": "9fc9fd947cecab75",
+      "language": "python",
+      "methods": [
+        "doc-generator",
+        "graph"
+      ],
+      "scores": {},
+      "final_score": 0.0,
+      "entity_ids": [
+        "e_75bd17e64c5ebc9b",
+        "e_0c5a33e6fc6e674c"
+      ],
+      "uncertainty": [],
+      "text": "@app.get(\"/price/{sku}\")\ndef get_price(sku: str, discount: float = 0):\n    return apply_discount(PRODUCTS[0], discount)"
+    },
+    {
+      "id": "E7",
+      "revision": "nogit+c2db680b30",
+      "path": "inventory/config.py",
+      "start_line": 1,
+      "end_line": 14,
+      "symbol": "<module>",
+      "chunk_id": "4f0bbb807ad66f33",
+      "language": "python",
+      "methods": [
+        "graph",
+        "doc-generator"
+      ],
+      "scores": {},
+      "final_score": 0.0,
+      "entity_ids": [
+        "e_e5267b8d644c539c"
+      ],
+      "uncertainty": [],
+      "text": "\"\"\"Configuration read from environment variables.\"\"\"\nimport os\n\n\ndef database_url() -> str:\n    return os.getenv(\"DATABASE_URL\", \"sqlite:///inventory.db\")\n\n\ndef api_port() -> int:\n    return int(os.environ.get(\"API_PORT\", \"8080\"))\n\n\ndef smtp_host() -> str:\n    return os.getenv(\"SMTP_HOST\", \"localhost\")"
+    },
+    {
+      "id": "E8",
+      "revision": "nogit+c2db680b30",
+      "path": "inventory/config.py",
+      "start_line": 5,
+      "end_line": 6,
+      "symbol": "inventory.config.database_url",
+      "chunk_id": "414dec70937485b4",
+      "language": "python",
+      "methods": [
+        "graph",
+        "doc-generator"
+      ],
+      "scores": {},
+      "final_score": 0.0,
+      "entity_ids": [
+        "e_81618738c8187689"
+      ],
+      "uncertainty": [],
+      "text": "def database_url() -> str:\n    return os.getenv(\"DATABASE_URL\", \"sqlite:///inventory.db\")"
+    },
+    {
+      "id": "E9",
+      "revision": "nogit+c2db680b30",
+      "path": "inventory/config.py",
+      "start_line": 9,
+      "end_line": 10,
+      "symbol": "inventory.config.api_port",
+      "chunk_id": "0278e044d258ac88",
+      "language": "python",
+      "methods": [
+        "graph",
+        "doc-generator"
+      ],
+      "scores": {},
+      "final_score": 0.0,
+      "entity_ids": [
+        "e_524e23f03bfcb62c"
+      ],
+      "uncertainty": [],
+      "text": "def api_port() -> int:\n    return int(os.environ.get(\"API_PORT\", \"8080\"))"
+    },
+    {
+      "id": "E10",
+      "revision": "nogit+c2db680b30",
+      "path": "inventory/config.py",
+      "start_line": 13,
+      "end_line": 14,
+      "symbol": "inventory.config.smtp_host",
+      "chunk_id": "a214c3b09bb0d6e3",
+      "language": "python",
+      "methods": [
+        "graph",
+        "doc-generator"
+      ],
+      "scores": {},
+      "final_score": 0.0,
+      "entity_ids": [
+        "e_1c750dbc837db222"
+      ],
+      "uncertainty": [],
+      "text": "def smtp_host() -> str:\n    return os.getenv(\"SMTP_HOST\", \"localhost\")"
+    },
+    {
+      "id": "E11",
+      "revision": "nogit+c2db680b30",
+      "path": "inventory/models.py",
+      "start_line": 1,
+      "end_line": 17,
+      "symbol": "<module>",
+      "chunk_id": "d2a3aa8b0192a65b",
+      "language": "python",
+      "methods": [
+        "graph",
+        "doc-generator"
+      ],
+      "scores": {},
+      "final_score": 0.0,
+      "entity_ids": [
+        "e_41374af3d0e3a1c3"
+      ],
+      "uncertainty": [],
+      "text": "\"\"\"Data models.\"\"\"\n\n\nclass Base:\n    \"\"\"Minimal declarative base.\"\"\"\n\n\nclass Product(Base):\n    \"\"\"A stocked product.\"\"\"\n\n    def __init__(self, sku: str, quantity: int = 0, price: float = 0.0):\n        self.sku = sku\n        self.quantity = quantity\n        self.price = price\n\n    def total_value(self) -> float:\n        return self.quantity * self.price"
+    },
+    {
+      "id": "E12",
+      "revision": "nogit+c2db680b30",
+      "path": "inventory/models.py",
+      "start_line": 4,
+      "end_line": 5,
+      "symbol": "inventory.models.Base",
+      "chunk_id": "18bc982dac2766f0",
+      "language": "python",
+      "methods": [
+        "graph",
+        "doc-generator"
+      ],
+      "scores": {},
+      "final_score": 0.0,
+      "entity_ids": [
+        "e_9615fdc374e8b13d"
+      ],
+      "uncertainty": [],
+      "text": "class Base:\n    \"\"\"Minimal declarative base.\"\"\""
+    },
+    {
+      "id": "E13",
+      "revision": "nogit+c2db680b30",
+      "path": "inventory/models.py",
+      "start_line": 8,
+      "end_line": 17,
+      "symbol": "inventory.models.Product",
+      "chunk_id": "1d7f9f3c61649751",
+      "language": "python",
+      "methods": [
+        "graph",
+        "doc-generator"
+      ],
+      "scores": {},
+      "final_score": 0.0,
+      "entity_ids": [
+        "e_db2fcaff5e93046d",
+        "e_67e5a48952599723",
+        "e_d0764a4560f2d7aa"
+      ],
+      "uncertainty": [],
+      "text": "class Product(Base):\n    \"\"\"A stocked product.\"\"\"\n\n    def __init__(self, sku: str, quantity: int = 0, price: float = 0.0):\n        self.sku = sku\n        self.quantity = quantity\n        self.price = price\n\n    def total_value(self) -> float:\n        return self.quantity * self.price"
+    },
+    {
+      "id": "E14",
+      "revision": "nogit+c2db680b30",
+      "path": "inventory/notifier.py",
+      "start_line": 1,
+      "end_line": 15,
+      "symbol": "<module>",
+      "chunk_id": "3dd3aabc7f4a5154",
+      "language": "python",
+      "methods": [
+        "graph",
+        "doc-generator"
+      ],
+      "scores": {},
+      "final_score": 0.0,
+      "entity_ids": [
+        "e_df3a5afb9399f982"
+      ],
+      "uncertainty": [],
+      "text": "\"\"\"Low-stock notifications.\"\"\"\nimport requests\n\nfrom inventory.config import smtp_host\n\nWEBHOOK_PASSWORD = \"hunter2-prod\"\n\n\ndef notify_low_stock(sku: str, quantity: int) -> bool:\n    try:\n        requests.post(f\"http://{smtp_host()}/notify\", json={\"sku\": sku, \"quantity\": quantity})\n        return True\n    except:\n        pass\n    return False"
+    },
+    {
+      "id": "E15",
+      "revision": "nogit+c2db680b30",
+      "path": "inventory/notifier.py",
+      "start_line": 9,
+      "end_line": 15,
+      "symbol": "inventory.notifier.notify_low_stock",
+      "chunk_id": "18752e9fa7358510",
+      "language": "python",
+      "methods": [
+        "graph",
+        "doc-generator"
+      ],
+      "scores": {},
+      "final_score": 0.0,
+      "entity_ids": [
+        "e_920dd86ecfca1bc0"
+      ],
+      "uncertainty": [],
+      "text": "def notify_low_stock(sku: str, quantity: int) -> bool:\n    try:\n        requests.post(f\"http://{smtp_host()}/notify\", json={\"sku\": sku, \"quantity\": quantity})\n        return True\n    except:\n        pass\n    return False"
+    },
+    {
+      "id": "E16",
+      "revision": "nogit+c2db680b30",
+      "path": "inventory/service.py",
+      "start_line": 1,
+      "end_line": 30,
+      "symbol": "<module>",
+      "chunk_id": "4e5dfc4657011427",
+      "language": "python",
+      "methods": [
+        "graph",
+        "doc-generator"
+      ],
+      "scores": {},
+      "final_score": 0.0,
+      "entity_ids": [
+        "e_fa8ed13e22819bc0"
+      ],
+      "uncertainty": [],
+      "text": "\"\"\"Stock management business logic.\"\"\"\nfrom inventory.models import Product\nfrom inventory.notifier import notify_low_stock\nfrom inventory.utils import parse_sku\n\nLOW_STOCK_LIMIT = 5\n\n\ndef add_stock(product: Product, amount: int) -> Product:\n    \"\"\"Increase the quantity of a product.\"\"\"\n    if amount <= 0:\n        raise ValueError(\"amount must be positive\")\n    product.quantity += amount\n    return product\n\n\ndef remove_stock(product: Product, amount: int, history=[]) -> Product:\n    if amount > product.quantity:\n        raise ValueError(\"insufficient stock\")\n    product.quantity -= amount\n    history.append(amount)\n    if product.quantity < LOW_STOCK_LIMIT:\n        notify_low_stock(parse_sku(product.sku), product.quantity)\n    return product\n\n\ndef apply_discount(product: Product, percent: float) -> float:\n    \"\"\"Return the discounted unit price.\"\"\"\n    if percent < 0 or percent > 100:\n        raise ValueError(\"percent out of range\")"
+    },
+    {
+      "id": "E17",
+      "revision": "nogit+c2db680b30",
+      "path": "inventory/service.py",
+      "start_line": 9,
+      "end_line": 14,
+      "symbol": "inventory.service.add_stock",
+      "chunk_id": "2a46bc7ed69f2c36",
+      "language": "python",
+      "methods": [
+        "graph",
+        "doc-generator"
+      ],
+      "scores": {},
+      "final_score": 0.0,
+      "entity_ids": [
+        "e_7dd50c6d6b398f49"
+      ],
+      "uncertainty": [],
+      "text": "def add_stock(product: Product, amount: int) -> Product:\n    \"\"\"Increase the quantity of a product.\"\"\"\n    if amount <= 0:\n        raise ValueError(\"amount must be positive\")\n    product.quantity += amount\n    return product"
+    },
+    {
+      "id": "E18",
+      "revision": "nogit+c2db680b30",
+      "path": "inventory/service.py",
+      "start_line": 17,
+      "end_line": 24,
+      "symbol": "inventory.service.remove_stock",
+      "chunk_id": "5502d30c8df441a5",
+      "language": "python",
+      "methods": [
+        "graph",
+        "doc-generator"
+      ],
+      "scores": {},
+      "final_score": 0.0,
+      "entity_ids": [
+        "e_10e0bb88cc2fa36c"
+      ],
+      "uncertainty": [],
+      "text": "def remove_stock(product: Product, amount: int, history=[]) -> Product:\n    if amount > product.quantity:\n        raise ValueError(\"insufficient stock\")\n    product.quantity -= amount\n    history.append(amount)\n    if product.quantity < LOW_STOCK_LIMIT:\n        notify_low_stock(parse_sku(product.sku), product.quantity)\n    return product"
+    },
+    {
+      "id": "E19",
+      "revision": "nogit+c2db680b30",
+      "path": "inventory/service.py",
+      "start_line": 27,
+      "end_line": 31,
+      "symbol": "inventory.service.apply_discount",
+      "chunk_id": "2afc16d16e7c8470",
+      "language": "python",
+      "methods": [
+        "graph",
+        "doc-generator"
+      ],
+      "scores": {},
+      "final_score": 0.0,
+      "entity_ids": [
+        "e_c9b37a14d9a14255"
+      ],
+      "uncertainty": [],
+      "text": "def apply_discount(product: Product, percent: float) -> float:\n    \"\"\"Return the discounted unit price.\"\"\"\n    if percent < 0 or percent > 100:\n        raise ValueError(\"percent out of range\")\n    return product.price * (1 - percent / 100)"
+    },
+    {
+      "id": "E20",
+      "revision": "nogit+c2db680b30",
+      "path": "inventory/service.py",
+      "start_line": 34,
+      "end_line": 36,
+      "symbol": "inventory.service.stock_report",
+      "chunk_id": "4ed3d0d2be2349b5",
+      "language": "python",
+      "methods": [
+        "graph",
+        "doc-generator"
+      ],
+      "scores": {},
+      "final_score": 0.0,
+      "entity_ids": [
+        "e_d865956d7b7976c8"
+      ],
+      "uncertainty": [],
+      "text": "def stock_report(products: list) -> dict:\n    # TODO: add pagination\n    return {p.sku: p.total_value() for p in products}"
+    },
+    {
+      "id": "E21",
+      "revision": "nogit+c2db680b30",
+      "path": "inventory/utils.py",
+      "start_line": 1,
+      "end_line": 17,
+      "symbol": "<module>",
+      "chunk_id": "2289d52d6d2bde58",
+      "language": "python",
+      "methods": [
+        "graph",
+        "doc-generator"
+      ],
+      "scores": {},
+      "final_score": 0.0,
+      "entity_ids": [
+        "e_62aeab5d5a441480"
+      ],
+      "uncertainty": [],
+      "text": "\"\"\"Helper functions.\"\"\"\nimport subprocess\n\n\ndef parse_sku(raw: str) -> str:\n    \"\"\"Normalise a SKU string.\"\"\"\n    if not raw:\n        raise ValueError(\"SKU must not be empty\")\n    return raw.strip().upper()\n\n\ndef run_command(cmd: str) -> str:\n    return subprocess.check_output(cmd, shell=True, text=True)\n\n\ndef legacy_calc(expression: str):\n    return eval(expression)"
+    },
+    {
+      "id": "E22",
+      "revision": "nogit+c2db680b30",
+      "path": "inventory/utils.py",
+      "start_line": 5,
+      "end_line": 9,
+      "symbol": "inventory.utils.parse_sku",
+      "chunk_id": "24babd70281797ae",
+      "language": "python",
+      "methods": [
+        "graph",
+        "doc-generator"
+      ],
+      "scores": {},
+      "final_score": 0.0,
+      "entity_ids": [
+        "e_134f771653e9ae34"
+      ],
+      "uncertainty": [],
+      "text": "def parse_sku(raw: str) -> str:\n    \"\"\"Normalise a SKU string.\"\"\"\n    if not raw:\n        raise ValueError(\"SKU must not be empty\")\n    return raw.strip().upper()"
+    },
+    {
+      "id": "E23",
+      "revision": "nogit+c2db680b30",
+      "path": "inventory/utils.py",
+      "start_line": 12,
+      "end_line": 13,
+      "symbol": "inventory.utils.run_command",
+      "chunk_id": "648f213d81710d24",
+      "language": "python",
+      "methods": [
+        "graph",
+        "doc-generator"
+      ],
+      "scores": {},
+      "final_score": 0.0,
+      "entity_ids": [
+        "e_2184585098d16a73"
+      ],
+      "uncertainty": [],
+      "text": "def run_command(cmd: str) -> str:\n    return subprocess.check_output(cmd, shell=True, text=True)"
+    },
+    {
+      "id": "E24",
+      "revision": "nogit+c2db680b30",
+      "path": "inventory/utils.py",
+      "start_line": 16,
+      "end_line": 17,
+      "symbol": "inventory.utils.legacy_calc",
+      "chunk_id": "850c3fefcf405dee",
+      "language": "python",
+      "methods": [
+        "graph",
+        "doc-generator"
+      ],
+      "scores": {},
+      "final_score": 0.0,
+      "entity_ids": [
+        "e_71fbc5fc9672842e"
+      ],
+      "uncertainty": [],
+      "text": "def legacy_calc(expression: str):\n    return eval(expression)"
+    },
+    {
+      "id": "E25",
+      "revision": "nogit+c2db680b30",
+      "path": "main.py",
+      "start_line": 1,
+      "end_line": 11,
+      "symbol": "<module>",
+      "chunk_id": "7ac5151628a9fa0e",
+      "language": "python",
+      "methods": [
+        "graph",
+        "doc-generator"
+      ],
+      "scores": {},
+      "final_score": 0.0,
+      "entity_ids": [
+        "e_ad86806d138ef2c7"
+      ],
+      "uncertainty": [],
+      "text": "\"\"\"Entry point of the inventory service.\"\"\"\nfrom inventory.api import app\nfrom inventory.config import api_port\n\n\ndef main():\n    app.run(port=api_port(), debug=True)\n\n\nif __name__ == \"__main__\":\n    main()"
+    },
+    {
+      "id": "E26",
+      "revision": "nogit+c2db680b30",
+      "path": "main.py",
+      "start_line": 6,
+      "end_line": 7,
+      "symbol": "main.main",
+      "chunk_id": "959918d3fe486ccc",
+      "language": "python",
+      "methods": [
+        "graph",
+        "doc-generator"
+      ],
+      "scores": {},
+      "final_score": 0.0,
+      "entity_ids": [
+        "e_74e346a10bf566da"
+      ],
+      "uncertainty": [],
+      "text": "def main():\n    app.run(port=api_port(), debug=True)"
+    },
+    {
+      "id": "E27",
+      "revision": "nogit+c2db680b30",
+      "path": "inventory/config.py",
+      "start_line": 10,
+      "end_line": 10,
+      "symbol": "inventory.config.api_port",
+      "chunk_id": "0278e044d258ac88",
+      "language": "python",
+      "methods": [
+        "graph",
+        "doc-generator"
+      ],
+      "scores": {},
+      "final_score": 0.0,
+      "entity_ids": [
+        "e_524e23f03bfcb62c"
+      ],
+      "uncertainty": [],
+      "text": "    return int(os.environ.get(\"API_PORT\", \"8080\"))"
+    },
+    {
+      "id": "E28",
+      "revision": "nogit+c2db680b30",
+      "path": "inventory/config.py",
+      "start_line": 6,
+      "end_line": 6,
+      "symbol": "inventory.config.database_url",
+      "chunk_id": "414dec70937485b4",
+      "language": "python",
+      "methods": [
+        "graph",
+        "doc-generator"
+      ],
+      "scores": {},
+      "final_score": 0.0,
+      "entity_ids": [
+        "e_81618738c8187689"
+      ],
+      "uncertainty": [],
+      "text": "    return os.getenv(\"DATABASE_URL\", \"sqlite:///inventory.db\")"
+    },
+    {
+      "id": "E29",
+      "revision": "nogit+c2db680b30",
+      "path": "inventory/config.py",
+      "start_line": 14,
+      "end_line": 14,
+      "symbol": "inventory.config.smtp_host",
+      "chunk_id": "a214c3b09bb0d6e3",
+      "language": "python",
+      "methods": [
+        "graph",
+        "doc-generator"
+      ],
+      "scores": {},
+      "final_score": 0.0,
+      "entity_ids": [
+        "e_1c750dbc837db222"
+      ],
+      "uncertainty": [],
+      "text": "    return os.getenv(\"SMTP_HOST\", \"localhost\")"
+    },
+    {
+      "id": "E30",
+      "revision": "nogit+c2db680b30",
+      "path": "inventory/config.py",
+      "start_line": 2,
+      "end_line": 2,
+      "symbol": "<module>",
+      "chunk_id": "4f0bbb807ad66f33",
+      "language": "python",
+      "methods": [
+        "graph",
+        "doc-generator"
+      ],
+      "scores": {},
+      "final_score": 0.0,
+      "entity_ids": [
+        "e_e5267b8d644c539c"
+      ],
+      "uncertainty": [],
+      "text": "import os"
+    },
+    {
+      "id": "E31",
+      "revision": "nogit+c2db680b30",
+      "path": "inventory/notifier.py",
+      "start_line": 2,
+      "end_line": 2,
+      "symbol": "<module>",
+      "chunk_id": "3dd3aabc7f4a5154",
+      "language": "python",
+      "methods": [
+        "graph",
+        "doc-generator"
+      ],
+      "scores": {},
+      "final_score": 0.0,
+      "entity_ids": [
+        "e_df3a5afb9399f982"
+      ],
+      "uncertainty": [],
+      "text": "import requests"
+    },
+    {
+      "id": "E32",
+      "revision": "nogit+c2db680b30",
+      "path": "inventory/utils.py",
+      "start_line": 2,
+      "end_line": 2,
+      "symbol": "<module>",
+      "chunk_id": "2289d52d6d2bde58",
+      "language": "python",
+      "methods": [
+        "graph",
+        "doc-generator"
+      ],
+      "scores": {},
+      "final_score": 0.0,
+      "entity_ids": [
+        "e_62aeab5d5a441480"
+      ],
+      "uncertainty": [],
+      "text": "import subprocess"
+    },
+    {
+      "id": "E33",
+      "revision": "nogit+c2db680b30",
+      "path": "tests/test_service.py",
+      "start_line": 1,
+      "end_line": 1,
+      "symbol": "<module>",
+      "chunk_id": "cfa8e4e67ab25ff0",
+      "language": "python",
+      "methods": [
+        "graph",
+        "doc-generator"
+      ],
+      "scores": {},
+      "final_score": 0.0,
+      "entity_ids": [
+        "e_e4b5925256643e78"
+      ],
+      "uncertainty": [],
+      "text": "import pytest"
+    },
+    {
+      "id": "E34",
+      "revision": "nogit+c2db680b30",
+      "path": "requirements.txt",
+      "start_line": 1,
+      "end_line": 1,
+      "symbol": "<preamble>",
+      "chunk_id": "cca2b370b8ce0d81",
+      "language": "text",
+      "methods": [
+        "doc-generator",
+        "graph",
+        "semantic"
+      ],
+      "scores": {},
+      "final_score": 0.0,
+      "entity_ids": [
+        "e_c96aa3662b75f3ba"
+      ],
+      "uncertainty": [],
+      "text": "requests==2.32.3"
+    },
+    {
+      "id": "E35",
+      "revision": "nogit+c2db680b30",
+      "path": "README.md",
+      "start_line": 5,
+      "end_line": 7,
+      "symbol": "Install",
+      "chunk_id": "0b3e84b256d20439",
+      "language": "markdown",
+      "methods": [
+        "doc-generator",
+        "graph",
+        "semantic"
+      ],
+      "scores": {},
+      "final_score": 0.0,
+      "entity_ids": [
+        "e_2f826706c968e26a"
+      ],
+      "uncertainty": [],
+      "text": "## Install\nCreate a virtual environment and `pip install -r requirements.txt`.\n"
+    },
+    {
+      "id": "E36",
+      "revision": "nogit+c2db680b30",
+      "path": "README.md",
+      "start_line": 8,
+      "end_line": 9,
+      "symbol": "Usage",
+      "chunk_id": "b7775b031bea638e",
+      "language": "markdown",
+      "methods": [
+        "doc-generator",
+        "graph",
+        "semantic"
+      ],
+      "scores": {},
+      "final_score": 0.0,
+      "entity_ids": [
+        "e_2f826706c968e26a"
+      ],
+      "uncertainty": [],
+      "text": "## Usage\nRun `python main.py` to start the service. Configure it through the variables listed in `.env.example`."
+    },
+    {
+      "id": "E37",
+      "revision": "nogit+c2db680b30",
+      "path": "Dockerfile",
+      "start_line": 1,
+      "end_line": 4,
+      "symbol": "FROM python:3.11-slim",
+      "chunk_id": "b3a2e537449e9725",
+      "language": "dockerfile",
+      "methods": [
+        "graph",
+        "doc-generator"
+      ],
+      "scores": {},
+      "final_score": 0.0,
+      "entity_ids": [
+        "e_74c9846745c7cef3"
+      ],
+      "uncertainty": [],
+      "text": "FROM python:3.11-slim\nCOPY . /app\nWORKDIR /app\nCMD [\"python\", \"main.py\"]"
+    },
+    {
+      "id": "E38",
+      "revision": "nogit+c2db680b30",
+      "path": "tests/test_service.py",
+      "start_line": 7,
+      "end_line": 9,
+      "symbol": "tests.test_service.test_add_stock",
+      "chunk_id": "39ffea781c5277de",
+      "language": "python",
+      "methods": [
+        "graph"
+      ],
+      "scores": {},
+      "final_score": 0.0,
+      "entity_ids": [
+        "e_72685c5f6eec1299"
+      ],
+      "uncertainty": [],
+      "text": "def test_add_stock():\n    p = add_stock(Product(\"A\", 1), 2)\n    assert p.quantity == 3"
+    }
+  ],
+  "verification": {
+    "total": 73,
+    "citation_valid": 41,
+    "unverified": 0,
+    "removed": 0,
+    "uncited": 32,
+    "claims_with_evidence": 41,
+    "citation_coverage": 0.562,
+    "note": "Citation validity means the cited lines exist in the indexed revision and match the stored chunk; it does not prove the claim's interpretation is correct."
+  },
+  "uncertainty": [
+    "AI narrative skipped: AI interpretation disabled for this request"
+  ],
+  "errors": [],
+  "ai": {
+    "used": false,
+    "model": null,
+    "error": "AI interpretation disabled for this request"
+  },
+  "stale_index": false,
+  "generated_at": "2026-10-28T07:37:03+00:00",
+  "engine": "sequential-fallback (langgraph not installed)",
+  "elapsed_s": 0.05
+}

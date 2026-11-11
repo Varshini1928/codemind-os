@@ -1,0 +1,9 @@
+# Slim runtime for hosted deployment (Render). No torch / chromadb / langgraph: hashing embeddings, SQLite vectors and the
+# sequential workflow engine are used. Everything here is free/open source.
+fastapi==0.115.6
+uvicorn==0.34.0
+pydantic==2.10.4
+networkx==3.4.2
+numpy==1.26.4
+requests==2.32.3
+PyYAML==6.0.2
