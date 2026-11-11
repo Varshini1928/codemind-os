@@ -6,6 +6,9 @@ Guiding principle: **evidence before automation.** Every answer separates *verif
 
 > Read `docs/IMPLEMENTATION_STATUS.md` first: it lists exactly what has been tested and what has not.
 
+# Deployment link
+https://codemind-os-1ind.onrender.com
+
 ## What works without any model
 
 Indexing, the knowledge graph, exact/lexical/semantic(hash)/graph retrieval, citation verification, rule-based quality review, change-impact analysis, test planning and documentation generation all work **without Ollama**. A local LLM adds natural-language interpretation on top; when it is missing or fails, results say so (`ai.used = false`, `ai.error`) and fall back to the deterministic output.
